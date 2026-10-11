@@ -7,6 +7,9 @@ on:
       post_date:
         description: "Publish the post for this date (YYYY-MM-DD) instead of today"
         required: false
+  push:  # publish immediately by committing publish-now.txt containing the post date
+    branches: [main]
+    paths: ["publish-now.txt"]
 permissions:
   contents: write
 concurrency: repo-write
@@ -19,14 +22,22 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests tzdata
-      - run: python scripts/publish.py
+      - name: Pick the post date
+        run: |
+          if [ -f publish-now.txt ]; then echo "POST_DATE=$(tr -dc '0-9-' < publish-now.txt)" >> "$GITHUB_ENV"; git rm -q publish-now.txt;
+          elif [ -n "${{ inputs.post_date }}" ]; then echo "POST_DATE=${{ inputs.post_date }}" >> "$GITHUB_ENV"; fi
+      - name: Publish
+        run: |
+          mkdir -p logs
+          set -o pipefail
+          python scripts/publish.py 2>&1 | tee logs/publish_log.txt
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          POST_DATE: ${{ inputs.post_date }}
       - name: Record status
+        if: always()
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add queue
+          git add -A queue logs/publish_log.txt
           git diff --cached --quiet || git commit -m "Mark post published" && git push
