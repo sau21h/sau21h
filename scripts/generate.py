@@ -16,6 +16,7 @@ Env: GEMINI_API_KEY (required), IMAGE_MODEL (default gemini-nano-banana-2.1),
      IMAGE_SIZE (default 2K).
 """
 import base64
+import datetime
 import io
 import json
 import os
@@ -33,6 +34,9 @@ FEED_SIZE = (1080, 1350)  # Instagram's 4:5 portrait size
 SUBTITLE_FONT = ROOT / "style" / "fonts" / "NotoSerif-Italic.ttf"
 SUBTITLE_COLOUR = (246, 228, 158)  # pale yellow, like film subtitles
 SAFE_ZONE = "Keep the subject fully inside the frame, slightly above the bottom edge."
+# Standard (non-batch) price per image, from ai.google.dev/gemini-api/docs/pricing (Oct 2026).
+PRICE_USD = {"1K": 0.0336, "2K": 0.0504, "4K": 0.113}
+USD_VND = 26300  # approximate; Google bills the prepay balance in VND
 SUBTITLE_SPACE = ("Keep the lowest fifth of the image calm and simple, with nothing important there, "
                   "because a subtitle will be added later. Do not draw any text.")
 
@@ -94,7 +98,39 @@ def feed_image(full, out):
     canvas.save(out, "JPEG", quality=93)
 
 
-def generate(slide, out):
+def log_spend(post_date, n):
+    """Append one API call to logs/spend.csv (estimated cost)."""
+    path = ROOT / "logs" / "spend.csv"
+    path.parent.mkdir(exist_ok=True)
+    if not path.exists():
+        path.write_text("time,post,slide,model,size,usd,vnd
+", encoding="utf-8")
+    usd = PRICE_USD.get(SIZE, PRICE_USD["2K"])
+    now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y-%m-%d %H:%M")
+    with path.open("a", encoding="utf-8") as f:
+        f.write(f"{now},{post_date},{n},{MODEL},{SIZE},{usd},{round(usd * USD_VND)}
+")
+
+
+def write_spend_summary(made_now):
+    """Write logs/spend_summary.txt: this run, total spent, estimated balance left."""
+    rows = (ROOT / "logs" / "spend.csv").read_text(encoding="utf-8").splitlines()[1:]
+    spent = sum(int(r.rsplit(",", 1)[1]) for r in rows if r)
+    run = sum(int(r.rsplit(",", 1)[1]) for r in rows[len(rows) - made_now:]) if made_now else 0
+    credit = json.loads((ROOT / "logs" / "credit.json").read_text(encoding="utf-8"))
+    topped = sum(t["vnd"] for t in credit["topups"])
+    (ROOT / "logs" / "spend_summary.txt").write_text(
+        f"this run: {made_now} images, ~{run:,} VND
+"
+        f"total: {len(rows)} images, ~{spent:,} VND
+"
+        f"topped up: {topped:,} VND
+"
+        f"estimated balance: ~{topped - spent:,} VND
+", encoding="utf-8")
+
+
+def generate(slide, out, post_date, n):
     """Make <n>_916.jpg (one API call) and <n>.jpg. Returns True if the API was called."""
     full_path = out.with_name(f"{out.stem}_916.jpg")
     raw_path = out.with_name(f"{out.stem}_raw.jpg")  # clean copy, so subtitles can be redone for free
@@ -106,6 +142,7 @@ def generate(slide, out):
         return False
     else:
         img = Image.open(io.BytesIO(image_bytes(build_prompt(slide)))).convert("RGB")
+        log_spend(post_date, n)
         if slide.get("subtitle"):
             img.save(raw_path, "JPEG", quality=92)
         called = True
@@ -131,7 +168,7 @@ def main():
                 if out.exists():
                     continue
                 try:
-                    if generate(slide, out):
+                    if generate(slide, out, post["date"], n):
                         made += 1
                     print(f"made {out.relative_to(ROOT)}")
                 except Exception as e:  # keep going; the failed slide is retried next run
@@ -147,6 +184,7 @@ def main():
                 break
         qfile.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{made} images generated")
+    write_spend_summary(made)
     # Actions logs need a sign-in, so keep the errors in the repo where they can be read.
     log = ROOT / "logs" / "generate_errors.txt"
     log.parent.mkdir(exist_ok=True)

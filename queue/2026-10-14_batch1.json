@@ -3,20 +3,16 @@
     "date": "profile",
     "pillar": "Ảnh đại diện",
     "format": "single",
-    "status": "review",
-    "hook": "Avatar cho @sau21h — 3 lựa chọn, không đăng",
+    "status": "draft",
+    "hook": "Avatar v2 — bản tối giản của option 1 (2 biến thể), không đăng",
     "slides": [
       {
         "style": "anime",
-        "prompt": "kept from first render: young person on a balcony at night with a phone, wall clock at 9"
+        "prompt": "Minimal iconic profile picture, centred so it reads well cropped to a circle: a small apartment balcony seen from outside, the dark silhouette of a young person sitting on the railing looking at a softly glowing phone, one warm lit window behind them, a small round wall clock showing 9 o'clock. Nothing else: no city, no plants, no stars. Flat clean shapes. Sky colour: deep cobalt blue"
       },
       {
         "style": "anime",
-        "prompt": "kept: window, tea and 9 o'clock clock"
-      },
-      {
-        "style": "anime",
-        "prompt": "kept: cat on a windowsill looking at the moon"
+        "prompt": "Minimal iconic profile picture, centred so it reads well cropped to a circle: the silhouette of a young person sitting on a balcony railing seen from behind, head tilted up at a thin crescent moon, the warm glow of a phone in their hand the only warm light. Nothing else: no city, no plants. Flat clean shapes. Sky colour: smooth gradient from deep indigo to soft violet"
       }
     ],
     "caption": "",
@@ -126,12 +122,12 @@
     "date": "2026-10-20",
     "pillar": "20/10",
     "format": "single",
-    "status": "review",
-    "hook": "Tự thương mình — làm lại: tự đạp xe chở hoa ven sông Sài Gòn",
+    "status": "draft",
+    "hook": "Tự thương mình — giờ vàng, tự mua hoa ở tiệm hoa góc phố Sài Gòn (không áo dài)",
     "slides": [
       {
         "style": "anime",
-        "prompt": "A young woman in a white áo dài riding a bicycle along the Saigon riverside promenade at night, a bouquet of white daisies in the front basket, smiling to herself, across the river the Landmark 81 tower glowing. Sky colour: rosy pink fading into indigo",
+        "prompt": "Golden hour late afternoon in Saigon: a young woman in a simple linen shirt and jeans, seen from behind, walking out of a tiny corner flower shop holding a bouquet of white daisies she bought for herself, buckets of flowers on the pavement, warm low sunlight and long shadows, Landmark 81 small in the distance. Sky colour: warm peach fading into soft blue. Daytime, not night",
         "subtitle": "tự thương mình cũng là một kiểu dịu dàng"
       }
     ],

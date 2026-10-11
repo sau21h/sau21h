@@ -112,10 +112,10 @@ const posts =
     "hashtags": "#tuoitho #hoainiem #sau21h"
   },
   {
-    "date": "2026-10-18",
+    "date": "2026-10-11",
     "pillar": "Sài Gòn",
     "format": "single",
-    "status": "review",
+    "status": "approved",
     "hook": "Chủ nhật tối — sợ thứ Hai (giữ ảnh cũ)",
     "slides": [
       {
@@ -217,11 +217,11 @@ const posts =
     "pillar": "Sài Gòn",
     "format": "single",
     "status": "review",
-    "hook": "Bờ sông Thủ Thiêm — hai người bạn",
+    "hook": "Bờ sông Thủ Thiêm — hai người bạn, tháp Bitexco",
     "slides": [
       {
         "style": "anime",
-        "prompt": "kept"
+        "prompt": "Two young friends seen from behind sitting on the grassy riverbank at Thu Thiem in Saigon at night, two cups of iced kumquat tea beside them; across the wide calm Saigon River the District 1 skyline with the Bitexco Financial Tower clearly recognisable (a slim glass tower shaped like a lotus bud with a round helipad sticking out near the top) glowing warmly, city lights reflected on the water, no bridge. Sky colour: deep teal blue"
       }
     ],
     "caption": "sài gòn khuya không cần đi đâu xa,\nchỉ cần một bờ sông và một người bạn.",
@@ -251,7 +251,7 @@ const posts =
     "slides": [
       {
         "style": "anime",
-        "prompt": "Hoan Kiem Lake in Hanoi at night in autumn: the small Turtle Tower glowing softly on its islet in the calm lake and the red The Huc bridge lit up at the side, in the foreground a young person seen from behind walking alone along the lakeshore under a warm street lamp, a few fallen yellow leaves. Sky colour: deep indigo with a thin moon",
+        "prompt": "Hoan Kiem Lake in Hanoi at night in autumn: in the middle of the wide calm lake, far from the shore, the small three-storey Turtle Tower (Tháp Rùa) glowing softly on its tiny islet with no bridge anywhere near it; in the foreground the lakeshore with an old leaning lộc vừng tree whose branches hang over the water, and a young person seen from behind walking alone under a warm street lamp, a few fallen leaves. Sky colour: deep indigo with a thin moon",
         "subtitle": "nhớ ai sau 9h đêm"
       }
     ],
@@ -262,7 +262,7 @@ const posts =
 ;
 const list = document.getElementById('list');
 for (const p of posts) {
-  const imgs = p.slides.map((s, i) => `<figure><img loading="lazy" src="posts/${p.date}/${i + 1}.jpg?v=6" alt=""><figcaption>${i + 1}</figcaption></figure>`).join('');
+  const imgs = p.slides.map((s, i) => `<figure><img loading="lazy" src="posts/${p.date}/${i + 1}.jpg?v=7" alt=""><figcaption>${i + 1}</figcaption></figure>`).join('');
   const el = document.createElement('div');
   el.className = 'post';
   el.innerHTML = `<div class="head"><span class="date">${p.date}</span><span class="tag">${p.pillar}</span><span class="tag">${p.format}</span><span class="tag">${p.status}</span></div>

@@ -1,0 +1,6 @@
+{
+  "note": "Gemini prepay top-ups for the sau21h key (VND). Add a line each time you top up.",
+  "topups": [
+    {"date": "2026-10-11", "vnd": 150000}
+  ]
+}
