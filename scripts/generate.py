@@ -1,11 +1,17 @@
 """Generate images for every 'draft' post in queue/*.json.
 
-Images land in posts/<date>/<n>.jpg (Instagram's API only accepts JPEG).
-Existing files are skipped, so to re-roll a slide just delete its file and run again.
+Each slide is rendered once as a 9:16 phone wallpaper (posts/<date>/<n>_916.jpg).
+The feed image posts/<date>/<n>.jpg is made from it for free: the whole 9:16 picture
+centred on a black 4:5 canvas (Instagram's API rejects 9:16 feed images).
+A slide's optional "subtitle" is drawn by this script, never by the model, so every
+subtitle uses the same font, colour and position.
+
+Existing files are skipped, so to re-roll a slide delete both of its files and run again.
+If only <n>_916.jpg exists, the feed image is rebuilt from it without calling the API.
 Posts move draft -> review once all their slides exist.
 
 Env: GEMINI_API_KEY (required), IMAGE_MODEL (default gemini-nano-banana-2.1),
-     IMAGE_SIZE (default 1K).
+     IMAGE_SIZE (default 2K).
 """
 import base64
 import io
@@ -15,30 +21,27 @@ import pathlib
 import sys
 
 from google import genai
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MODEL = os.environ.get("IMAGE_MODEL", "gemini-nano-banana-2.1")
-SIZE = os.environ.get("IMAGE_SIZE", "2K")  # 2K so the 4:5 crop still reaches Instagram's 1080px width
-# Render phone-wallpaper 9:16, then crop 4:5 for the feed (the API rejects 9:16 feed images).
+SIZE = os.environ.get("IMAGE_SIZE", "2K")
 ASPECT = "9:16"
-# Where the 4:5 window sits vertically (0 = top, 1 = bottom). Anime frames put the subject
-# low under a big empty sky, so their crop keeps the bottom; cinematic frames are centred.
-CROP_ANCHOR = {"anime": 0.9, "cinematic": 0.5}
-SAFE_ZONE = {
-    "anime": "Keep the subject fully inside the frame, slightly above the bottom edge; the top of the sky may be cropped for the feed.",
-    "cinematic": "Keep the subject and anything important inside the central 70% of the image height, "
-                 "because the top and bottom will be cropped for the feed.",
-}
+FEED_SIZE = (1080, 1350)  # Instagram's 4:5 portrait size
+SUBTITLE_FONT = ROOT / "style" / "fonts" / "NotoSerif-Italic.ttf"
+SUBTITLE_COLOUR = (246, 228, 158)  # pale yellow, like film subtitles
+SAFE_ZONE = "Keep the subject fully inside the frame, slightly above the bottom edge."
+SUBTITLE_SPACE = ("Keep the lowest fifth of the image calm and simple, with nothing important there, "
+                  "because a subtitle will be added later. Do not draw any text.")
 
 styles = json.loads((ROOT / "style" / "styles.json").read_text(encoding="utf-8"))
 client = genai.Client()
 
 
 def build_prompt(slide):
-    prompt = f"{slide['prompt']}. {styles[slide['style']]} {SAFE_ZONE[slide['style']]}"
-    if '"' in slide["prompt"]:  # slide asks for on-image text
-        prompt += f" {styles['text_rule']}"
+    prompt = f"{slide['prompt']}. {styles[slide['style']]} {SAFE_ZONE}"
+    if slide.get("subtitle"):
+        prompt += f" {SUBTITLE_SPACE}"
     return prompt
 
 
@@ -66,25 +69,39 @@ def image_bytes(prompt):
         raise RuntimeError(f"no image returned: {result.text}")
 
 
-def crop_feed(img, out, style):
-    """Save the 4:5 feed crop of a 9:16 image as <n>.jpg."""
+def add_subtitle(img, text):
+    """Draw a film-style subtitle centred at 82% of the height."""
     w, h = img.size
-    crop_h = round(w * 5 / 4)
-    top = round((h - crop_h) * CROP_ANCHOR[style])
-    img.crop((0, top, w, top + crop_h)).save(out, "JPEG", quality=92)
+    font = ImageFont.truetype(str(SUBTITLE_FONT), size=round(w * 0.042))
+    try:
+        font.set_variation_by_name("Italic")  # regular weight of the variable font
+    except Exception:
+        pass
+    draw = ImageDraw.Draw(img)
+    draw.text((w / 2, h * 0.82), text, font=font, fill=SUBTITLE_COLOUR, anchor="mm",
+              stroke_width=max(2, w // 600), stroke_fill=(20, 16, 10))
+    return img
 
 
-def generate(prompt, out, style):
-    """Save the 9:16 wallpaper as <n>_916.jpg and its 4:5 crop as <n>.jpg.
+def feed_image(full, out):
+    """Centre the whole 9:16 image on a black 4:5 canvas and save it as <n>.jpg."""
+    canvas = Image.new("RGB", FEED_SIZE, "black")
+    fitted = full.resize((round(full.width * FEED_SIZE[1] / full.height), FEED_SIZE[1]), Image.LANCZOS)
+    canvas.paste(fitted, ((FEED_SIZE[0] - fitted.width) // 2, 0))
+    canvas.save(out, "JPEG", quality=93)
 
-    If <n>_916.jpg already exists (e.g. a test render moved into place), only the crop is made."""
-    full = out.with_name(f"{out.stem}_916.jpg")
-    if full.exists():
-        crop_feed(Image.open(full).convert("RGB"), out, style)
+
+def generate(slide, out):
+    """Make <n>_916.jpg (one API call) and <n>.jpg. Returns True if the API was called."""
+    full_path = out.with_name(f"{out.stem}_916.jpg")
+    if full_path.exists():
+        feed_image(Image.open(full_path).convert("RGB"), out)
         return False
-    img = Image.open(io.BytesIO(image_bytes(prompt))).convert("RGB")
-    img.save(full, "JPEG", quality=92)
-    crop_feed(img, out, style)
+    img = Image.open(io.BytesIO(image_bytes(build_prompt(slide)))).convert("RGB")
+    if slide.get("subtitle"):
+        img = add_subtitle(img, slide["subtitle"])
+    img.save(full_path, "JPEG", quality=92)
+    feed_image(img, out)
     return True
 
 
@@ -103,7 +120,7 @@ def main():
                 if out.exists():
                     continue
                 try:
-                    if generate(build_prompt(slide), out, slide["style"]):
+                    if generate(slide, out):
                         made += 1
                     print(f"made {out.relative_to(ROOT)}")
                 except Exception as e:  # keep going; the failed slide is retried next run

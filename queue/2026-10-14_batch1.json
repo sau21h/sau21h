@@ -3,21 +3,12 @@
     "date": "profile",
     "pillar": "Ảnh đại diện",
     "format": "single",
-    "status": "review",
+    "status": "draft",
     "hook": "Avatar cho @sau21h — 3 lựa chọn, không đăng",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "kept from first render: young person on a balcony at night with a phone, wall clock at 9"
-      },
-      {
-        "style": "anime",
-        "prompt": "Simple iconic profile picture: one small window glowing warm yellow in a wall, on the windowsill a cup of tea with steam and a small round clock showing 9 o'clock, no people, bold simple shapes, subject centred so it reads well cropped to a circle"
-      },
-      {
-        "style": "anime",
-        "prompt": "Simple iconic profile picture: a small cat sitting on a windowsill seen from behind looking up at a crescent moon, a string of tiny warm fairy lights along the window, bold simple shapes, subject centred so it reads well cropped to a circle"
-      }
+      {"style": "anime", "prompt": "kept from first render: young person on a balcony at night with a phone, wall clock at 9"},
+      {"style": "anime", "prompt": "kept: window, tea and 9 o'clock clock"},
+      {"style": "anime", "prompt": "kept: cat on a windowsill looking at the moon"}
     ],
     "caption": "",
     "hashtags": ""
@@ -26,13 +17,10 @@
     "date": "2026-10-14",
     "pillar": "Sài Gòn",
     "format": "single",
-    "status": "review",
-    "hook": "Chung cư cũ Sài Gòn lúc 9h tối — nhiều ô cửa sáng đèn",
+    "status": "draft",
+    "hook": "Chung cư cũ Sài Gòn lúc 9h tối — có Landmark 81 để nhận ra Sài Gòn",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "An old 1960s Saigon apartment block seen from across the street at 9pm, its facade in the lower third with many windows glowing warm yellow, potted plants and laundry on the balconies, in the centre one balcony with fairy lights where a young person waters plants"
-      }
+      {"style": "anime", "prompt": "An old 1960s Saigon apartment block at 9pm in the lower third, many windows glowing warm yellow, one balcony with fairy lights where a young person waters potted plants; behind it on the skyline the tall Landmark 81 tower clearly visible and softly lit. Sky colour: deep cobalt blue just after dusk"}
     ],
     "caption": "mỗi ô cửa sáng đèn là một người đã về nhà.\n9h tối, ai cũng về đúng chỗ của mình rồi.",
     "hashtags": "#saigon #sau21h #chungcucu"
@@ -41,13 +29,10 @@
     "date": "2026-10-15",
     "pillar": "Sài Gòn",
     "format": "single",
-    "status": "review",
+    "status": "draft",
     "hook": "Metro số 1 — cặp đôi về chuyến tàu cuối",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "The Ho Chi Minh City metro train on its elevated track at night, crossing the lower third of the frame, its windows glowing warm; through one window the silhouette of a young couple, her head resting on his shoulder; city lights soft and small below the track"
-      }
+      {"style": "anime", "prompt": "kept"}
     ],
     "caption": "chuyến tàu cuối ngày,\nmay mà có người cùng về.",
     "hashtags": "#saigon #metrosaigon #sau21h"
@@ -56,21 +41,12 @@
     "date": "2026-10-16",
     "pillar": "Đà Lạt",
     "format": "carousel",
-    "status": "review",
-    "hook": "Đà Lạt mưa — 3 ảnh anime",
+    "status": "draft",
+    "hook": "Đà Lạt mưa — 3 ảnh, mỗi ảnh có một dấu hiệu Đà Lạt",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "A small wooden cottage on a Da Lat pine hill at night in light rain, one window glowing warm yellow with the silhouette of a person holding a steaming cup inside, a few pine silhouettes, thin rain streaks catching the light"
-      },
-      {
-        "style": "anime",
-        "prompt": "Two friends seen from behind sharing one umbrella, walking down a gentle pine-lined slope in Da Lat on a misty rainy evening, a row of warm street lamps glowing along the road, wet road reflecting the light"
-      },
-      {
-        "style": "anime",
-        "prompt": "A small hot soy milk stall at the Da Lat night market in light rain, a warm glowing umbrella with steam rising from the pots into the cool night air, a few people in beanies and jackets gathered around it seen from behind"
-      }
+      {"style": "anime", "prompt": "The Da Lat Cathedral (the pink 'Rooster Church' with its single tall spire topped by a rooster) on its hill at night in light rain, warm light glowing from its windows, a young person with a small umbrella walking up the road below, pine silhouettes. Sky colour: misty teal blue"},
+      {"style": "anime", "prompt": "Two friends seen from behind sharing one umbrella, walking along the pine-lined shore of Xuan Huong Lake in Da Lat on a misty rainy evening, warm street lamps along the path, the colourful houses of Da Lat glowing on the hillside across the lake. Sky colour: misty teal blue"},
+      {"style": "anime", "prompt": "A small hot soy milk stall glowing warm at the Da Lat night market in light rain, steam rising from the pots, a few people in beanies and jackets seen from behind, and above them the lit-up Da Lat Market building on the hill. Sky colour: misty teal blue"}
     ],
     "caption": "mưa đà lạt không làm người ta buồn,\nchỉ làm người ta chậm lại.",
     "hashtags": "#dalat #sau21h #muadalat"
@@ -79,13 +55,10 @@
     "date": "2026-10-17",
     "pillar": "Hoài niệm",
     "format": "single",
-    "status": "review",
-    "hook": "Tối thứ 7 hồi đó — ấm hơn",
+    "status": "draft",
+    "hook": "Tối thứ 7 hồi đó — phụ đề đồng nhất",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "kept"
-      }
+      {"style": "cinematic", "prompt": "A cozy living room in an old Vietnamese house in the early 2000s on a Saturday evening, warm yellow light from a table lamp and the glow of a small CRT television showing cartoons, a child seen from behind sitting on a straw mat in front of it, a bowl of snacks beside them, comfortable and nostalgic", "subtitle": "hồi đó tối thứ 7 là cả thế giới"}
     ],
     "caption": "hồi đó tối thứ 7 là cả thế giới.\ngiờ thế giới rộng hơn nhiều, mà tối thứ 7 lại trống hơn.",
     "hashtags": "#tuoitho #hoainiem #sau21h"
@@ -97,10 +70,7 @@
     "status": "review",
     "hook": "Chủ nhật tối — sợ thứ Hai (giữ ảnh cũ)",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "kept from first render"
-      }
+      {"style": "cinematic", "prompt": "kept from first render"}
     ],
     "caption": "mai lại thứ hai rồi.\nai cũng đang cố một chút, kể cả bạn.",
     "hashtags": "#saigon #chunhat #sau21h"
@@ -109,13 +79,10 @@
     "date": "2026-10-19",
     "pillar": "20/10",
     "format": "single",
-    "status": "review",
-    "hook": "Mẹ sau 9h tối — ấm hơn",
+    "status": "draft",
+    "hook": "Mẹ sau 9h tối — làm lại (anime)",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "kept"
-      }
+      {"style": "anime", "prompt": "A small Vietnamese tube house at night seen from the street, in the lower third: the kitchen window glows warm yellow with the silhouette of a mother washing dishes inside, the upstairs bedroom window already dark, a potted plant and a parked motorbike at the door. Sky colour: soft warm violet", "subtitle": "9h tối con được nghỉ, mẹ thì chưa"}
     ],
     "caption": "9h tối con được nghỉ.\nmẹ thì chưa bao giờ có giờ tan ca.",
     "hashtags": "#2010 #me #sau21h"
@@ -124,13 +91,10 @@
     "date": "2026-10-20",
     "pillar": "20/10",
     "format": "single",
-    "status": "review",
-    "hook": "Tự thương mình — sân thượng Sài Gòn",
+    "status": "draft",
+    "hook": "Tự thương mình — làm lại: tự đạp xe chở hoa ven sông Sài Gòn",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "A young woman in a white áo dài sitting at the edge of a Saigon rooftop at night holding a bouquet of white daisies, a big warm moon, the city lights small and soft far below. Subtitle line: \"tự thương mình cũng là một kiểu dịu dàng\""
-      }
+      {"style": "anime", "prompt": "A young woman in a white áo dài riding a bicycle along the Saigon riverside promenade at night, a bouquet of white daisies in the front basket, smiling to herself, across the river the Landmark 81 tower glowing. Sky colour: rosy pink fading into indigo", "subtitle": "tự thương mình cũng là một kiểu dịu dàng"}
     ],
     "caption": "không ai tặng hoa thì mình tự mua.\ntự thương mình cũng là một kiểu dịu dàng.",
     "hashtags": "#2010 #saigon #sau21h"
@@ -139,21 +103,12 @@
     "date": "2026-10-21",
     "pillar": "Đà Lạt",
     "format": "carousel",
-    "status": "review",
+    "status": "draft",
     "hook": "Mùa dã quỳ Đà Lạt — 3 ảnh anime",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "style test render: dã quỳ hillside with motorbike at blue hour"
-      },
-      {
-        "style": "anime",
-        "prompt": "Close-up of yellow wild sunflowers (dã quỳ) in the lower third catching the last warm light of dusk, the little mountain town of Da Lat glowing with tiny warm lights far below in a misty valley"
-      },
-      {
-        "style": "anime",
-        "prompt": "Two friends seen from behind sitting by a small campfire roasting sweet potatoes on a Da Lat hillside of yellow wild sunflowers at blue hour, warm firelight on the flowers, a few pine silhouettes"
-      }
+      {"style": "anime", "prompt": "kept"},
+      {"style": "anime", "prompt": "kept"},
+      {"style": "anime", "prompt": "kept"}
     ],
     "caption": "đà lạt đang vàng nhất năm.\ncó những nơi chỉ cần biết nó vẫn ở đó, đã thấy dễ thở hơn.",
     "hashtags": "#dalat #daquy #sau21h"
@@ -162,29 +117,14 @@
     "date": "2026-10-22",
     "pillar": "Trend",
     "format": "carousel",
-    "status": "review",
+    "status": "draft",
     "hook": "Nếu Việt Nam là phim Ghibli — 5 ảnh",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "Saigon as a Studio Ghibli film: the red-brick Notre-Dame Cathedral of Saigon with its two spires glowing warmly at night, a girl on a bicycle with a basket of flowers riding past in front of it, a big soft moon"
-      },
-      {
-        "style": "anime",
-        "prompt": "Hoi An as a Studio Ghibli film: one small wooden boat with a single glowing paper lantern drifting on the calm Thu Bon river at night, the old yellow houses with lanterns small along the bank"
-      },
-      {
-        "style": "anime",
-        "prompt": "Ha Long Bay as a Studio Ghibli film: one small wooden junk boat with red sails and a warm lantern gliding between two limestone islands at night under a few stars"
-      },
-      {
-        "style": "anime",
-        "prompt": "style test render: Da Nang Dragon Bridge glowing gold over the Han River"
-      },
-      {
-        "style": "anime",
-        "prompt": "Ninh Binh as a Studio Ghibli film: one small rowing boat with a warm lantern drifting on the calm river of Trang An between tall limestone cliffs at night, fireflies over the water, a full moon"
-      }
+      {"style": "anime", "prompt": "kept: Saigon Notre-Dame Cathedral"},
+      {"style": "anime", "prompt": "kept: Hoi An"},
+      {"style": "anime", "prompt": "kept: Ha Long"},
+      {"style": "anime", "prompt": "kept: Da Nang Dragon Bridge"},
+      {"style": "anime", "prompt": "kept: Ninh Binh"}
     ],
     "caption": "nếu việt nam là một bộ phim ghibli,\nchắc nó sẽ chậm như thế này: đèn lồng, mặt nước, và những người không vội.",
     "hashtags": "#ghibli #vietnam #sau21h"
@@ -193,13 +133,10 @@
     "date": "2026-10-23",
     "pillar": "Sài Gòn",
     "format": "single",
-    "status": "review",
+    "status": "draft",
     "hook": "Bờ sông Thủ Thiêm — hai người bạn",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "Two young friends seen from behind sitting on the riverside steps at Thu Thiem in Saigon at night, two cups of iced kumquat tea beside them, across the calm river the Saigon skyline and the Ba Son cable-stayed bridge glowing warm and small, reflections on the water"
-      }
+      {"style": "anime", "prompt": "kept"}
     ],
     "caption": "sài gòn khuya không cần đi đâu xa,\nchỉ cần một bờ sông và một người bạn.",
     "hashtags": "#saigon #thuthiem #sau21h"
@@ -208,13 +145,10 @@
     "date": "2026-10-24",
     "pillar": "Sài Gòn",
     "format": "single",
-    "status": "review",
+    "status": "draft",
     "hook": "Sài Gòn mưa đêm — đèn đỏ (anime)",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "A motorbike rider in a translucent raincoat waiting at a red traffic light on a quiet Saigon street at night in the rain, the red signal and a few warm shop lights reflected on the wet road, rain streaks catching the light"
-      }
+      {"style": "anime", "prompt": "kept"}
     ],
     "caption": "đèn đỏ 90 giây giữa cơn mưa.\nđủ lâu để nhớ lại một chuyện cũ.",
     "hashtags": "#saigon #saigonmua #sau21h"
@@ -223,15 +157,12 @@
     "date": "2026-10-25",
     "pillar": "Hà Nội",
     "format": "single",
-    "status": "review",
-    "hook": "Nhớ ai sau 9h đêm (anime)",
+    "status": "draft",
+    "hook": "Nhớ ai sau 9h đêm — Hồ Gươm để nhận ra Hà Nội",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "A quiet Hanoi street in autumn at night, tall old trees, a single warm street lamp, fallen yellow leaves on the pavement, a young person walking under the lamp with hands in pockets seen from behind. Subtitle line: \"nhớ ai sau 9h đêm\""
-      }
+      {"style": "anime", "prompt": "Hoan Kiem Lake in Hanoi at night in autumn: the small Turtle Tower glowing softly on its islet in the calm lake and the red The Huc bridge lit up at the side, in the foreground a young person seen from behind walking alone along the lakeshore under a warm street lamp, a few fallen yellow leaves. Sky colour: deep indigo with a thin moon", "subtitle": "nhớ ai sau 9h đêm"}
     ],
     "caption": "nhớ ai sau 9h đêm.",
-    "hashtags": "#hanoi #sau21h"
+    "hashtags": "#hanoi #hoguom #sau21h"
   }
 ]
