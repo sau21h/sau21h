@@ -103,13 +103,11 @@ def log_spend(post_date, n):
     path = ROOT / "logs" / "spend.csv"
     path.parent.mkdir(exist_ok=True)
     if not path.exists():
-        path.write_text("time,post,slide,model,size,usd,vnd
-", encoding="utf-8")
+        path.write_text("time,post,slide,model,size,usd,vnd\n", encoding="utf-8")
     usd = PRICE_USD.get(SIZE, PRICE_USD["2K"])
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=7))).strftime("%Y-%m-%d %H:%M")
     with path.open("a", encoding="utf-8") as f:
-        f.write(f"{now},{post_date},{n},{MODEL},{SIZE},{usd},{round(usd * USD_VND)}
-")
+        f.write(f"{now},{post_date},{n},{MODEL},{SIZE},{usd},{round(usd * USD_VND)}\n")
 
 
 def write_spend_summary(made_now):
@@ -120,14 +118,10 @@ def write_spend_summary(made_now):
     credit = json.loads((ROOT / "logs" / "credit.json").read_text(encoding="utf-8"))
     topped = sum(t["vnd"] for t in credit["topups"])
     (ROOT / "logs" / "spend_summary.txt").write_text(
-        f"this run: {made_now} images, ~{run:,} VND
-"
-        f"total: {len(rows)} images, ~{spent:,} VND
-"
-        f"topped up: {topped:,} VND
-"
-        f"estimated balance: ~{topped - spent:,} VND
-", encoding="utf-8")
+        f"this run: {made_now} images, ~{run:,} VND\n"
+        f"total: {len(rows)} images, ~{spent:,} VND\n"
+        f"topped up: {topped:,} VND\n"
+        f"estimated balance: ~{topped - spent:,} VND\n", encoding="utf-8")
 
 
 def generate(slide, out, post_date, n):
