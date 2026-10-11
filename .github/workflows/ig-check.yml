@@ -1,0 +1,35 @@
+name: Check Instagram connection
+# Read-only: confirms the token works and shows the posting quota. Never publishes.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/ig-check.yml"]
+permissions:
+  contents: write
+concurrency: repo-write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query account and quota
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          mkdir -p logs
+          {
+            echo "checked: $(TZ=Asia/Ho_Chi_Minh date '+%Y-%m-%d %H:%M')"
+            echo "IG_USER_ID set: $([ -n "$IG_USER_ID" ] && echo yes || echo NO)"
+            echo "IG_ACCESS_TOKEN set: $([ -n "$IG_ACCESS_TOKEN" ] && echo yes || echo NO)"
+            echo "me: $(curl -s "https://graph.instagram.com/v24.0/me?fields=user_id,username,account_type&access_token=$IG_ACCESS_TOKEN")"
+            echo "quota: $(curl -s "https://graph.instagram.com/v24.0/$IG_USER_ID/content_publishing_limit?fields=quota_usage,config&access_token=$IG_ACCESS_TOKEN")"
+          } | sed "s/$IG_ACCESS_TOKEN/***/g" > logs/ig_check.txt
+          cat logs/ig_check.txt
+      - name: Save result
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add logs/ig_check.txt
+          git diff --cached --quiet || git commit -m "Instagram connection check" && git push
