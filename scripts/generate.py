@@ -62,7 +62,7 @@ def generate(prompt, out):
 
 
 def main():
-    made = 0
+    made, errors = 0, []
     for qfile in sorted((ROOT / "queue").glob("*.json")):
         posts = json.loads(qfile.read_text(encoding="utf-8"))
         for post in posts:
@@ -81,11 +81,18 @@ def main():
                     print(f"made {out.relative_to(ROOT)}")
                 except Exception as e:  # keep going; the failed slide is retried next run
                     ok = False
-                    print(f"FAILED {post['date']} slide {n}: {e}", file=sys.stderr)
+                    errors.append(f"{post['date']} slide {n}: {type(e).__name__}: {e}")
+                    print(f"FAILED {errors[-1]}", file=sys.stderr)
+                    if len(errors) >= 3 and made == 0:  # likely a setup problem; stop wasting calls
+                        break
             if ok:
                 post["status"] = "review"
         qfile.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{made} images generated")
+    # Actions logs need a sign-in, so keep the errors in the repo where they can be read.
+    log = ROOT / "logs" / "generate_errors.txt"
+    log.parent.mkdir(exist_ok=True)
+    log.write_text("".join(f"{e}\n" for e in errors), encoding="utf-8")
 
 
 if __name__ == "__main__":
