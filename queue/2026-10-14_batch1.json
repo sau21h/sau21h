@@ -3,11 +3,17 @@
     "date": "style-test",
     "pillar": "test",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Thử phong cách anime mới — không đăng",
     "slides": [
-      {"style": "anime", "prompt": "A Da Lat hillside covered in yellow wild sunflowers (dã quỳ) at blue hour, one small vintage motorbike parked at the roadside with its warm headlight on, a young rider seen from behind standing beside it looking at the view, a few dark pine silhouettes"},
-      {"style": "anime", "prompt": "Da Nang at night: the Dragon Bridge (Cầu Rồng) over the Han River, its golden dragon body glowing warm gold and arching across the frame, reflected in the calm river, a small boat with one lantern below"}
+      {
+        "style": "anime",
+        "prompt": "A Da Lat hillside covered in yellow wild sunflowers (dã quỳ) at blue hour, one small vintage motorbike parked at the roadside with its warm headlight on, a young rider seen from behind standing beside it looking at the view, a few dark pine silhouettes"
+      },
+      {
+        "style": "anime",
+        "prompt": "Da Nang at night: the Dragon Bridge (Cầu Rồng) over the Han River, its golden dragon body glowing warm gold and arching across the frame, reflected in the calm river, a small boat with one lantern below"
+      }
     ],
     "caption": "",
     "hashtags": ""
