@@ -3,7 +3,7 @@
     "date": "profile",
     "pillar": "Ảnh đại diện",
     "format": "single",
-    "status": "draft",
+    "status": "review",
     "hook": "Avatar cho @sau21h — không đăng, chỉ dùng làm ảnh profile",
     "slides": [
       {
@@ -18,7 +18,7 @@
     "date": "2026-10-14",
     "pillar": "Mùa & cảnh Việt",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Mùa thu Hà Nội về đêm — hoa sữa nồng nhất lúc tối muộn",
     "slides": [
       {
@@ -45,7 +45,7 @@
     "date": "2026-10-15",
     "pillar": "Truyền thuyết Việt",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Sơn Tinh – Thủy Tinh = câu chuyện người yêu cũ không buông bỏ",
     "slides": [
       {
@@ -72,7 +72,7 @@
     "date": "2026-10-16",
     "pillar": "Reel chill",
     "format": "reel",
-    "status": "draft",
+    "status": "review",
     "hook": "Đà Lạt mưa đêm — reel thư giãn tối thứ Sáu",
     "slides": [
       {
@@ -88,7 +88,7 @@
     "date": "2026-10-17",
     "pillar": "Hoài niệm",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Tối thứ 7 hồi bé vs bây giờ — tuổi thơ 9x/2k",
     "slides": [
       {
@@ -115,7 +115,7 @@
     "date": "2026-10-18",
     "pillar": "Tâm trạng",
     "format": "single",
-    "status": "draft",
+    "status": "review",
     "hook": "Chủ nhật tối — hội chứng sợ thứ Hai",
     "slides": [
       {
@@ -130,7 +130,7 @@
     "date": "2026-10-19",
     "pillar": "Sự kiện",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Đón 20/10 — mẹ mình sau 9h tối làm gì",
     "slides": [
       {
@@ -161,7 +161,7 @@
     "date": "2026-10-20",
     "pillar": "Sự kiện",
     "format": "single",
-    "status": "draft",
+    "status": "review",
     "hook": "20/10 — gửi những cô gái đang một mình sau 9h",
     "slides": [
       {
@@ -176,7 +176,7 @@
     "date": "2026-10-21",
     "pillar": "Mùa & cảnh Việt",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Mùa dã quỳ Đà Lạt — hoàng hôn đến đêm",
     "slides": [
       {
@@ -199,7 +199,7 @@
     "date": "2026-10-22",
     "pillar": "Trend",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Nếu thành phố Việt Nam là phim Ghibli (bản ban đêm)",
     "slides": [
       {
@@ -230,7 +230,7 @@
     "date": "2026-10-23",
     "pillar": "Reel chill",
     "format": "reel",
-    "status": "draft",
+    "status": "review",
     "hook": "Hội An đêm đèn lồng",
     "slides": [
       {
@@ -246,7 +246,7 @@
     "date": "2026-10-24",
     "pillar": "Đời sống & ẩm thực",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Đồ ăn đêm Việt — phở đêm, bánh mì, ốc, chè",
     "slides": [
       {
@@ -273,7 +273,7 @@
     "date": "2026-10-25",
     "pillar": "Tâm trạng",
     "format": "single",
-    "status": "draft",
+    "status": "review",
     "hook": "Câu tâm trạng mùa thu + hình nền",
     "slides": [
       {
