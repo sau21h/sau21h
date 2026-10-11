@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["queue/**", "style/**", "scripts/generate.py"]
+    paths: ["queue/**", "style/**", "scripts/generate.py", ".github/workflows/generate.yml"]
 permissions:
   contents: write
 concurrency: repo-write
