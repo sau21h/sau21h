@@ -8,6 +8,8 @@ subtitle uses the same font, colour and position.
 
 Existing files are skipped, so to re-roll a slide delete both of its files and run again.
 If only <n>_916.jpg exists, the feed image is rebuilt from it without calling the API.
+Subtitled slides also keep a clean <n>_raw.jpg; delete <n>.jpg and <n>_916.jpg to redraw the
+subtitle (new text or "subtitle_y" position) without calling the API.
 Posts move draft -> review once all their slides exist.
 
 Env: GEMINI_API_KEY (required), IMAGE_MODEL (default gemini-nano-banana-2.1),
@@ -69,8 +71,9 @@ def image_bytes(prompt):
         raise RuntimeError(f"no image returned: {result.text}")
 
 
-def add_subtitle(img, text):
-    """Draw a film-style subtitle centred at 82% of the height."""
+def add_subtitle(img, text, y=0.9):
+    """Draw a film-style subtitle centred at y (fraction of the height) on a copy of img."""
+    img = img.copy()
     w, h = img.size
     font = ImageFont.truetype(str(SUBTITLE_FONT), size=round(w * 0.042))
     try:
@@ -78,7 +81,7 @@ def add_subtitle(img, text):
     except Exception:
         pass
     draw = ImageDraw.Draw(img)
-    draw.text((w / 2, h * 0.82), text, font=font, fill=SUBTITLE_COLOUR, anchor="mm",
+    draw.text((w / 2, h * y), text, font=font, fill=SUBTITLE_COLOUR, anchor="mm",
               stroke_width=max(2, w // 600), stroke_fill=(20, 16, 10))
     return img
 
@@ -94,15 +97,23 @@ def feed_image(full, out):
 def generate(slide, out):
     """Make <n>_916.jpg (one API call) and <n>.jpg. Returns True if the API was called."""
     full_path = out.with_name(f"{out.stem}_916.jpg")
-    if full_path.exists():
+    raw_path = out.with_name(f"{out.stem}_raw.jpg")  # clean copy, so subtitles can be redone for free
+    called = False
+    if raw_path.exists():
+        img = Image.open(raw_path).convert("RGB")
+    elif full_path.exists():  # older render: subtitle (if any) is already baked in
         feed_image(Image.open(full_path).convert("RGB"), out)
         return False
-    img = Image.open(io.BytesIO(image_bytes(build_prompt(slide)))).convert("RGB")
+    else:
+        img = Image.open(io.BytesIO(image_bytes(build_prompt(slide)))).convert("RGB")
+        if slide.get("subtitle"):
+            img.save(raw_path, "JPEG", quality=92)
+        called = True
     if slide.get("subtitle"):
-        img = add_subtitle(img, slide["subtitle"])
+        img = add_subtitle(img, slide["subtitle"], slide.get("subtitle_y", 0.9))
     img.save(full_path, "JPEG", quality=92)
     feed_image(img, out)
-    return True
+    return called
 
 
 def main():
