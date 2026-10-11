@@ -102,18 +102,21 @@
   {
     "date": "2026-10-11",
     "pillar": "Sài Gòn",
-    "format": "single",
-    "status": "posted",
+    "format": "carousel",
+    "status": "draft",
     "hook": "Chủ nhật tối — sợ thứ Hai (giữ ảnh cũ)",
     "slides": [
       {
         "style": "cinematic",
         "prompt": "kept from first render"
+      },
+      {
+        "style": "cinematic",
+        "prompt": "Sunday night in a small rented room in Saigon, close-up by the door: a work backpack, a pair of sneakers and a folded shirt ready for Monday morning, a phone charging on the floor showing an alarm, warm lamplight, through the open window the city lights softly blurred. No people"
       }
     ],
     "caption": "mai lại thứ hai rồi.\nai cũng đang cố một chút, kể cả bạn.",
     "hashtags": "#saigon #chunhat #sau21h",
-    "media_id": "18384272269239300"
   },
   {
     "date": "2026-10-19",
