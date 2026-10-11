@@ -91,7 +91,7 @@
     "date": "2026-10-11",
     "pillar": "Sài Gòn",
     "format": "single",
-    "status": "approved",
+    "status": "posted",
     "hook": "Chủ nhật tối — sợ thứ Hai (giữ ảnh cũ)",
     "slides": [
       {
@@ -100,7 +100,8 @@
       }
     ],
     "caption": "mai lại thứ hai rồi.\nai cũng đang cố một chút, kể cả bạn.",
-    "hashtags": "#saigon #chunhat #sau21h"
+    "hashtags": "#saigon #chunhat #sau21h",
+    "media_id": "18384272269239300"
   },
   {
     "date": "2026-10-19",
