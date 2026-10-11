@@ -1,0 +1,5 @@
+# never publish keys
+*key*.txt
+*Key*.txt
+*.env
+.env*
