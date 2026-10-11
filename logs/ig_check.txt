@@ -1,0 +1,5 @@
+checked: 2026-10-11 22:12
+IG_USER_ID set: yes
+IG_ACCESS_TOKEN set: yes
+me: {"user_id":"17841418939527655","username":"sau21h","account_type":"MEDIA_CREATOR","id":"28639738982354245"}
+quota: {"data":[{"quota_usage":0,"config":{"quota_total":100,"quota_duration":86400}}]}
