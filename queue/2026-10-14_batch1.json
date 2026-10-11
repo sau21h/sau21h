@@ -6,282 +6,155 @@
     "status": "review",
     "hook": "Avatar cho @sau21h — không đăng, chỉ dùng làm ảnh profile",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "Simple iconic profile picture: a young Vietnamese person sitting alone on a small apartment balcony at night with a glowing phone in hand, potted plants, a crescent moon, city lights below, a round wall clock behind them showing 9 o'clock, subject centred with space around it so it reads well when cropped to a circle"
-      }
+      {"style": "anime", "prompt": "Simple iconic profile picture: a young Vietnamese person sitting alone on a small apartment balcony at night with a glowing phone, a wall clock showing 9 o'clock"}
     ],
     "caption": "",
     "hashtags": ""
   },
   {
     "date": "2026-10-14",
-    "pillar": "Mùa & cảnh Việt",
-    "format": "carousel",
-    "status": "review",
-    "hook": "Mùa thu Hà Nội về đêm — hoa sữa nồng nhất lúc tối muộn",
+    "pillar": "Sài Gòn",
+    "format": "single",
+    "status": "draft",
+    "hook": "Chung cư cũ Sài Gòn về đêm — một ô cửa còn sáng",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "A quiet Hanoi street at 9pm in autumn, milk-flower trees (hoa sữa) in white bloom under yellow street lamps, a young person in a hoodie riding a motorbike slowly, fallen leaves on the road, light mist"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "A late-night street vendor in Hanoi Old Quarter selling green young rice (cốm) and roasted chestnuts from a bamboo basket under a single warm bulb, a young couple stopping to buy, old shophouses with closed shutters"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "Hoan Kiem Lake at night in autumn, the red The Huc bridge lit up and reflected in the still water, a lone young person sitting on a stone bench looking at the lake, earphones in"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "Close-up on a small plastic stool on a Hanoi sidewalk at night: a glass of iced tea, an open lotus leaf with green cốm, a phone face-down, blurred headlights in the background"
-      }
+      {"style": "cinematic", "prompt": "The facade of an old 1960s Saigon apartment block (like 42 Nguyen Hue) late at night, almost every window dark, only one small balcony lit with warm yellow light where a young person sits alone hugging their knees, potted plants on the railing, the rest of the building fading into darkness"}
     ],
-    "caption": "hà nội 9h tối, mùi hoa sữa nồng hơn cả nỗi nhớ 🍂\n\ncomment \"HÀ NỘI\" mình gửi bản full HD làm hình nền\n.\n.\niPhone tự cắt ảnh, zoom nhỏ lại để xem trọn khung nha",
-    "hashtags": "#hanoi #muathuhanoi #hoasua #hanoivedem #hinhnen #aiart #sau21h"
+    "caption": "cả toà nhà đã tắt đèn, chỉ còn một ô cửa chưa ngủ.\nchắc ai cũng từng là ô cửa ấy, ít nhất một lần.",
+    "hashtags": "#saigon #sau21h #saigonvedem"
   },
   {
     "date": "2026-10-15",
-    "pillar": "Truyền thuyết Việt",
-    "format": "carousel",
-    "status": "review",
-    "hook": "Sơn Tinh – Thủy Tinh = câu chuyện người yêu cũ không buông bỏ",
+    "pillar": "Sài Gòn",
+    "format": "single",
+    "status": "draft",
+    "hook": "Metro số 1 lúc khuya",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "Epic night cover: Son Tinh, the Mountain God, a young Vietnamese warrior in ancient Văn Lang bronze-age attire, standing on a mountain peak under a full moon raising mountains, facing Thuy Tinh, the Water God, riding a giant dark wave with sea dragons and lightning. Large title text at the top: \"SƠN TINH – THỦY TINH\""
-      },
-      {
-        "style": "anime",
-        "prompt": "Princess Mỵ Nương of the Hùng kingdom at night on a stilt-house palace balcony lit by oil lamps, wearing ancient Văn Lang dress, looking out at the dark river with a complicated expression"
-      },
-      {
-        "style": "anime",
-        "prompt": "Son Tinh arriving at dawn with wedding gifts: an elephant with nine tusks, a rooster with nine spurs and a horse with nine red manes, procession through misty rice terraces"
-      },
-      {
-        "style": "anime",
-        "prompt": "Thuy Tinh alone at night in the middle of a flood he created, rain pouring, looking up at the mountain where the princess now lives, heartbroken and furious, water serpents circling him"
-      }
+      {"style": "cinematic", "prompt": "Inside an almost empty Ho Chi Minh City metro carriage late at night, a single young person leaning their head against the window, city lights streaking softly outside in motion blur, cool fluorescent light mixed with warm city glow, rows of empty seats"}
     ],
-    "caption": "người yêu cũ toxic nhất lịch sử việt nam: năm nào cũng dâng nước đòi quay lại 🌊\n\ncomment \"SƠN TINH\" mình gửi trọn bộ 4 ảnh\n.\n.\nteam sơn tinh hay team thủy tinh?",
-    "hashtags": "#sontinhthuytinh #truyenthuyetvietnam #anime #nguoiyeucu #aiart #sau21h"
+    "caption": "chuyến tàu cuối ngày.\nkhông ai nói gì, nhưng hình như ai cũng đang nghĩ về một người.",
+    "hashtags": "#saigon #metrosaigon #sau21h"
   },
   {
     "date": "2026-10-16",
     "pillar": "Reel chill",
     "format": "reel",
-    "status": "review",
-    "hook": "Đà Lạt mưa đêm — reel thư giãn tối thứ Sáu",
+    "status": "draft",
+    "hook": "Đà Lạt mưa — cửa sổ và cốc cacao",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "Rainy night in Da Lat, a small wooden cafe on a pine hill with warm yellow window light, a young person in a knitted sweater sitting alone by the window holding a cup of hot cocoa, fog between pine trees, raindrops on the glass",
-        "motion": "slow push-in, fog drifting, rain falling, steam rising from the cup"
-      }
+      {"style": "cinematic", "prompt": "A small wooden window at night in Da Lat, raindrops on the glass, a single cup of hot cocoa with steam on the windowsill lit by a warm lamp, pine forest dissolving into fog outside", "motion": "rain running down the glass, steam rising slowly, fog drifting"}
     ],
-    "caption": "tối thứ 6, không đi đâu, không gặp ai, vậy mà vui ☕️🌧️\n.\n.\ntag đứa bạn muốn trốn lên đà lạt cùng",
-    "hashtags": "#dalat #dalatmua #chill #cozyvibes #aiart #sau21h"
+    "caption": "mưa đà lạt không làm người ta buồn,\nchỉ làm người ta chậm lại.",
+    "hashtags": "#dalat #sau21h #muadalat"
   },
   {
     "date": "2026-10-17",
     "pillar": "Hoài niệm",
-    "format": "carousel",
-    "status": "review",
-    "hook": "Tối thứ 7 hồi bé vs bây giờ — tuổi thơ 9x/2k",
+    "format": "single",
+    "status": "draft",
+    "hook": "Tối thứ 7 hồi đó",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "Early 2000s Vietnam, Saturday night: kids gathered around an old CRT TV showing cartoons in a small living room, a standing fan, a straw mat, a mosquito coil smoking, a bowl of instant noodles, warm tungsten light. Large text at the top: \"TỐI THỨ 7 HỒI ĐÓ\""
-      },
-      {
-        "style": "cinematic",
-        "prompt": "Early 2000s Vietnam at night: children playing hide and seek under a single street lamp in a narrow alley, one kid counting against a wall, others hiding behind motorbikes, a grandma watching from a doorway"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "Early 2000s Vietnam: a power cut at night, a family sitting outside on the porch with a hand fan and a candle, kids catching fireflies, stars above the rooftops"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "Present day: a grown-up young Vietnamese person alone in a small rented room at night, lying in bed scrolling a phone, the screen lighting their face, the same kind of old cartoon playing on the phone"
-      }
+      {"style": "cinematic", "prompt": "A dark room in an old Vietnamese house in the early 2000s, the only light comes from a small CRT television, the silhouette of a child sitting on a straw mat in front of it, everything else in deep shadow. Subtitle line: \"hồi đó tối thứ 7 là cả thế giới\""}
     ],
-    "caption": "hồi đó tối thứ 7 là cả thế giới. giờ tối thứ 7 là… nằm lướt điện thoại 🥲\n\ncomment \"HỒI ĐÓ\" mình gửi bản full HD\n.\n.\nbạn nhớ gì nhất về tối thứ 7 hồi bé?",
-    "hashtags": "#tuoitho #9x #2k #hoainiem #kyuc #aiart #sau21h"
+    "caption": "hồi đó tối thứ 7 là cả thế giới.\ngiờ thế giới rộng hơn nhiều, mà tối thứ 7 lại trống hơn.",
+    "hashtags": "#tuoitho #hoainiem #sau21h"
   },
   {
     "date": "2026-10-18",
-    "pillar": "Tâm trạng",
+    "pillar": "Sài Gòn",
     "format": "single",
     "status": "review",
-    "hook": "Chủ nhật tối — hội chứng sợ thứ Hai",
+    "hook": "Chủ nhật tối — sợ thứ Hai (giữ ảnh cũ)",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "Sunday night in a Saigon apartment block, a young person leaning on the railing of a corridor outside their rented room, city lights and an overpass in the distance, laundry hanging, a dim fluorescent light. Small elegant text at the bottom: \"mai lại thứ hai rồi\""
-      }
+      {"style": "cinematic", "prompt": "kept from first render"}
     ],
-    "caption": "mai lại thứ hai rồi. ai cũng đang cố một chút đó 🫂\n.\n.\nlưu làm hình nền, nhắn cho đứa bạn cũng đang sợ thứ hai",
-    "hashtags": "#chunhat #thuhai #tamtrang #saigon #hinhnen #aiart #sau21h"
+    "caption": "mai lại thứ hai rồi.\nai cũng đang cố một chút, kể cả bạn.",
+    "hashtags": "#saigon #chunhat #sau21h"
   },
   {
     "date": "2026-10-19",
-    "pillar": "Sự kiện",
-    "format": "carousel",
-    "status": "review",
-    "hook": "Đón 20/10 — mẹ mình sau 9h tối làm gì",
+    "pillar": "20/10",
+    "format": "single",
+    "status": "draft",
+    "hook": "Mẹ sau 9h tối",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "A Vietnamese mother at 9pm still in the kitchen washing dishes under a single light, the house quiet, a cat sleeping on a chair. Large text at the top: \"MẸ SAU 9H TỐI\""
-      },
-      {
-        "style": "anime",
-        "prompt": "A Vietnamese mother at night sitting on the edge of a bed folding a pile of laundry, glasses on her nose, a small TV playing a drama in the background"
-      },
-      {
-        "style": "anime",
-        "prompt": "A Vietnamese mother at night looking at her phone with a soft smile, scrolling through photos of her grown-up child who lives far away, a cup of tea beside her"
-      },
-      {
-        "style": "anime",
-        "prompt": "A Vietnamese mother at night quietly opening the door of her teenage child's room to check if they are asleep, light from the hallway falling across the floor"
-      },
-      {
-        "style": "anime",
-        "prompt": "A young Vietnamese adult and their mother sitting together on the porch at night, sharing a plate of cut fruit, laughing, warm light from inside the house"
-      }
+      {"style": "cinematic", "prompt": "View from a dark hallway in a small Vietnamese house at night: at the far end, the silhouette of a mother standing at the kitchen sink framed by the doorway, lit by a single bare bulb, the rest of the house dark and quiet. Subtitle line: \"9h tối con được nghỉ, mẹ thì chưa\""}
     ],
-    "caption": "9h tối mình được nghỉ. còn mẹ thì chưa 🤍\n\ncomment \"20/10\" mình gửi trọn bộ để bạn gửi mẹ\n.\n.\ntối nay gọi cho mẹ chưa?",
-    "hashtags": "#2010 #ngayphunuvietnam #me #giadinh #anime #aiart #sau21h"
+    "caption": "9h tối con được nghỉ.\nmẹ thì chưa bao giờ có giờ tan ca.",
+    "hashtags": "#2010 #me #sau21h"
   },
   {
     "date": "2026-10-20",
-    "pillar": "Sự kiện",
+    "pillar": "20/10",
     "format": "single",
-    "status": "review",
-    "hook": "20/10 — gửi những cô gái đang một mình sau 9h",
+    "status": "draft",
+    "hook": "Tự thương mình — sân thượng Sài Gòn",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "A young Vietnamese woman in a white áo dài sitting alone on the rooftop of an old Hanoi building at night, holding a small bouquet of daisies she bought herself, city lights and a crescent moon behind her, peaceful and confident. Elegant text at the top: \"tự thương mình\""
-      }
+      {"style": "anime", "prompt": "Wide view of a Saigon rooftop under a big moon, a young woman in a white áo dài sitting small at the edge holding a bouquet of white daisies, the city lights soft and blurred far below, lots of empty night sky. Subtitle line: \"tự thương mình cũng là một kiểu dịu dàng\""}
     ],
-    "caption": "20/10 không có ai tặng hoa thì tự mua. tự thương mình cũng là một kiểu dịu dàng 🌷\n.\n.\nchúc mừng ngày phụ nữ việt nam, tag cô gái bạn thương",
-    "hashtags": "#2010 #ngayphunuvietnam #yeubanthan #aodai #anime #aiart #sau21h"
+    "caption": "không ai tặng hoa thì mình tự mua.\ntự thương mình cũng là một kiểu dịu dàng.",
+    "hashtags": "#2010 #saigon #sau21h"
   },
   {
     "date": "2026-10-21",
-    "pillar": "Mùa & cảnh Việt",
-    "format": "carousel",
-    "status": "review",
-    "hook": "Mùa dã quỳ Đà Lạt — hoàng hôn đến đêm",
+    "pillar": "Mùa",
+    "format": "single",
+    "status": "draft",
+    "hook": "Mùa dã quỳ Đà Lạt — giờ xanh",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "Da Lat hills covered in yellow wild sunflowers (dã quỳ) at dusk, the last orange light fading into blue, a young person sitting on a motorbike at the roadside looking at the view, the first stars appearing"
-      },
-      {
-        "style": "anime",
-        "prompt": "An old blue Lambretta scooter parked beside wild sunflowers at night, its headlight on, a small wooden house glowing in the valley below, fireflies"
-      },
-      {
-        "style": "anime",
-        "prompt": "Da Lat Xuan Huong lake at night framed by wild sunflowers and pine trees, two friends sitting on a bench sharing grilled rice paper (bánh tráng nướng), city lights reflected in the lake"
-      }
+      {"style": "cinematic", "prompt": "Blue hour just after sunset on a Da Lat hillside covered in yellow wild sunflowers (dã quỳ), one small motorbike parked at the roadside with its headlight on, a lone rider standing beside it looking at the view, pine silhouettes, deep blue sky"}
     ],
-    "caption": "đà lạt vàng nhất năm, mà mình thì vẫn đang ở văn phòng 🌼\n\ncomment \"DÃ QUỲ\" mình gửi bản full HD\n.\n.\niPhone tự cắt ảnh, zoom nhỏ lại để xem trọn khung nha",
-    "hashtags": "#dalat #daquy #muadaquy #hinhnen #anime #aiart #sau21h"
+    "caption": "đà lạt đang vàng nhất năm.\ncó những nơi chỉ cần biết nó vẫn ở đó, đã thấy dễ thở hơn.",
+    "hashtags": "#dalat #daquy #sau21h"
   },
   {
     "date": "2026-10-22",
     "pillar": "Trend",
     "format": "carousel",
-    "status": "review",
-    "hook": "Nếu thành phố Việt Nam là phim Ghibli (bản ban đêm)",
+    "status": "draft",
+    "hook": "Nếu Việt Nam là phim Ghibli — bản tối giản",
     "slides": [
-      {
-        "style": "anime",
-        "prompt": "Hanoi at night as a Studio Ghibli film: Long Bien bridge over the Red River with a lit-up train crossing under a huge moon, banana fields below, a girl on a bicycle on the dyke road. Large text at the top: \"NẾU VIỆT NAM LÀ PHIM GHIBLI\""
-      },
-      {
-        "style": "anime",
-        "prompt": "Hoi An at night as a Studio Ghibli film: the Japanese covered bridge with hundreds of colourful silk lanterns, boats with candles floating on the Thu Bon river, a cat sitting on a wooden railing"
-      },
-      {
-        "style": "anime",
-        "prompt": "Saigon at night as a Studio Ghibli film: an old apartment block full of plants and glowing windows, street food stalls with steam rising, motorbikes with light trails, a boy delivering bánh mì"
-      },
-      {
-        "style": "anime",
-        "prompt": "Ha Long Bay at night as a Studio Ghibli film: a traditional wooden junk boat with red sails and lanterns gliding between giant limestone islands under a sky full of stars, a whale-shaped cloud glowing in the moonlight"
-      },
-      {
-        "style": "anime",
-        "prompt": "Sa Pa at night as a Studio Ghibli film: rice terraces under moonlight, a small stilt house with warm light and smoke from the chimney, H'Mong children with a dog watching fireflies, clouds rolling over mountains"
-      }
+      {"style": "anime", "prompt": "Saigon Cho Lon at night as a Studio Ghibli film: an old tiled rooftop with a single row of red paper lanterns glowing, a cat sitting on the roof ridge looking at the moon"},
+      {"style": "anime", "prompt": "Hoi An at night as a Studio Ghibli film: one small wooden boat with a single paper lantern drifting on a dark calm river, soft reflections"},
+      {"style": "anime", "prompt": "Ha Long Bay at night as a Studio Ghibli film: one small junk boat with red sails between two limestone islands under a sky full of stars"}
     ],
-    "caption": "nếu việt nam là phim ghibli, bạn chọn sống ở đâu? 🎬\n\ncomment tên thành phố của bạn, mình vẽ phần 2\n.\n.\nlưu lại làm hình nền nha",
-    "hashtags": "#ghibli #ghiblistyle #vietnam #anime #hinhnen #aiart #sau21h"
+    "caption": "nếu việt nam là một bộ phim ghibli,\nchắc nó sẽ chậm như thế này: đèn lồng, mặt nước, và những người không vội.",
+    "hashtags": "#ghibli #vietnam #sau21h"
   },
   {
     "date": "2026-10-23",
-    "pillar": "Reel chill",
+    "pillar": "Sài Gòn",
     "format": "reel",
-    "status": "review",
-    "hook": "Hội An đêm đèn lồng",
+    "status": "draft",
+    "hook": "Sông Sài Gòn khuya — reel",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "Hoi An ancient town at night after rain, yellow walls glowing under hundreds of silk lanterns, a young woman walking slowly with a paper umbrella, reflections on the wet stone street, a small boat on the river with floating candles",
-        "motion": "slow dolly forward, lanterns swaying gently, candle lights flickering on the water"
-      }
+      {"style": "cinematic", "prompt": "The Saigon River late at night seen from Bach Dang wharf, one small lit ferry drifting slowly across dark water, the city skyline as soft blurred lights far in the distance, an empty bench in the foreground", "motion": "ferry drifting slowly, light ripples on the water"}
     ],
-    "caption": "hội an, nơi 9h tối vẫn còn ánh đèn chờ mình 🏮\n.\n.\ntag người bạn muốn thả đèn hoa đăng cùng",
-    "hashtags": "#hoian #phocohoian #denlong #chill #aiart #sau21h"
+    "caption": "sài gòn khuya,\ncon sông vẫn chảy như chưa từng có ai rời đi.",
+    "hashtags": "#saigon #songsaigon #sau21h"
   },
   {
     "date": "2026-10-24",
-    "pillar": "Đời sống & ẩm thực",
-    "format": "carousel",
-    "status": "review",
-    "hook": "Đồ ăn đêm Việt — phở đêm, bánh mì, ốc, chè",
+    "pillar": "Sài Gòn",
+    "format": "single",
+    "status": "draft",
+    "hook": "Sài Gòn mưa đêm — đèn đỏ",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "11pm at a Hanoi late-night phở stall on the sidewalk, steam rising from a huge pot under a single bulb, young people on plastic stools after a night out. Large text at the top: \"ĐÓI SAU 9H\""
-      },
-      {
-        "style": "cinematic",
-        "prompt": "A Saigon bánh mì cart at night on a busy street, glass case lit by a fluorescent tube, a young delivery rider in a helmet waiting for his order"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "A crowded snail (ốc) restaurant on a Saigon sidewalk at night, plates of colourful shellfish, friends laughing and toasting with iced tea, neon signs"
-      },
-      {
-        "style": "cinematic",
-        "prompt": "A small sweet-soup (chè) stall in a Hanoi alley at night, glass jars of colourful toppings, a young couple sharing one bowl, warm lantern light"
-      }
+      {"style": "cinematic", "prompt": "A single motorbike rider in a translucent raincoat stopped at a red light on an empty Saigon street at night, heavy rain, red and neon reflections on the wet asphalt, strong film grain, everything around them dark"}
     ],
-    "caption": "đã bảo tối nay không ăn nữa rồi mà 😭\n\ncomment món ăn đêm ruột của bạn, mình gửi ảnh đó full HD\n.\n.\nđói chưa nè",
-    "hashtags": "#andem #amthucviet #pho #banhmi #oc #aiart #sau21h"
+    "caption": "đèn đỏ 90 giây giữa cơn mưa.\nđủ lâu để nhớ lại một chuyện cũ.",
+    "hashtags": "#saigon #saigonmua #sau21h"
   },
   {
     "date": "2026-10-25",
-    "pillar": "Tâm trạng",
+    "pillar": "Hà Nội",
     "format": "single",
     "status": "review",
-    "hook": "Câu tâm trạng mùa thu + hình nền",
+    "hook": "Nhớ ai sau 9h đêm (giữ ảnh cũ)",
     "slides": [
-      {
-        "style": "cinematic",
-        "prompt": "A lonely street lamp on Phan Dinh Phung street in Hanoi at night in autumn, tall old trees, fallen yellow leaves, a young person walking under the lamp with hands in pockets, quiet, slightly foggy. Small elegant text at the bottom: \"nhớ ai sau 9h đêm\""
-      }
+      {"style": "cinematic", "prompt": "kept from first render"}
     ],
-    "caption": "nhớ ai sau 9h đêm 🍂\n.\n.\nlưu làm hình nền, rồi gửi cho người đó đi",
-    "hashtags": "#muathu #hanoi #tamtrang #nhoai #hinhnen #aiart #sau21h"
+    "caption": "nhớ ai sau 9h đêm.",
+    "hashtags": "#hanoi #sau21h"
   }
 ]

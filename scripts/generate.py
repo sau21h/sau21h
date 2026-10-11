@@ -5,7 +5,7 @@ Existing files are skipped, so to re-roll a slide just delete its file and run a
 Posts move draft -> review once all their slides exist.
 
 Env: GEMINI_API_KEY (required), IMAGE_MODEL (default gemini-nano-banana-2.1),
-     IMAGE_SIZE (default 2K).
+     IMAGE_SIZE (default 1K).
 """
 import base64
 import io
@@ -19,14 +19,18 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MODEL = os.environ.get("IMAGE_MODEL", "gemini-nano-banana-2.1")
-SIZE = os.environ.get("IMAGE_SIZE", "2K")
+SIZE = os.environ.get("IMAGE_SIZE", "2K")  # 2K so the 4:5 crop still reaches Instagram's 1080px width
+# Render phone-wallpaper 9:16, then crop the centre to 4:5 for the feed (the API rejects 9:16 feed images).
+ASPECT = "9:16"
+SAFE_ZONE = ("Keep the subject and anything important inside the central 70% of the image height, "
+             "because the top and bottom will be cropped for the feed.")
 
 styles = json.loads((ROOT / "style" / "styles.json").read_text(encoding="utf-8"))
 client = genai.Client()
 
 
 def build_prompt(slide):
-    prompt = f"{slide['prompt']}. {styles[slide['style']]}"
+    prompt = f"{slide['prompt']}. {styles[slide['style']]} {SAFE_ZONE}"
     if '"' in slide["prompt"]:  # slide asks for on-image text
         prompt += f" {styles['text_rule']}"
     return prompt
@@ -37,7 +41,7 @@ def image_bytes(prompt):
         result = client.interactions.create(
             model=MODEL,
             input=prompt,
-            response_format={"type": "image", "aspect_ratio": "4:5", "image_size": SIZE},
+            response_format={"type": "image", "aspect_ratio": ASPECT, "image_size": SIZE},
         )
         return base64.b64decode(result.output_image.data)
     except AttributeError:  # older SDK without client.interactions
@@ -47,7 +51,7 @@ def image_bytes(prompt):
             contents=prompt,
             config=types.GenerateContentConfig(
                 response_modalities=["IMAGE"],
-                image_config=types.ImageConfig(aspect_ratio="4:5", image_size=SIZE),
+                image_config=types.ImageConfig(aspect_ratio=ASPECT, image_size=SIZE),
             ),
         )
         for part in result.candidates[0].content.parts:
@@ -57,8 +61,13 @@ def image_bytes(prompt):
 
 
 def generate(prompt, out):
+    """Save the 9:16 wallpaper as <n>_916.jpg and its centred 4:5 crop as <n>.jpg."""
     img = Image.open(io.BytesIO(image_bytes(prompt))).convert("RGB")
-    img.save(out, "JPEG", quality=92)
+    img.save(out.with_name(f"{out.stem}_916.jpg"), "JPEG", quality=92)
+    w, h = img.size
+    crop_h = round(w * 5 / 4)
+    top = (h - crop_h) // 2
+    img.crop((0, top, w, top + crop_h)).save(out, "JPEG", quality=92)
 
 
 def main():
