@@ -20,17 +20,23 @@ from PIL import Image
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MODEL = os.environ.get("IMAGE_MODEL", "gemini-nano-banana-2.1")
 SIZE = os.environ.get("IMAGE_SIZE", "2K")  # 2K so the 4:5 crop still reaches Instagram's 1080px width
-# Render phone-wallpaper 9:16, then crop the centre to 4:5 for the feed (the API rejects 9:16 feed images).
+# Render phone-wallpaper 9:16, then crop 4:5 for the feed (the API rejects 9:16 feed images).
 ASPECT = "9:16"
-SAFE_ZONE = ("Keep the subject and anything important inside the central 70% of the image height, "
-             "because the top and bottom will be cropped for the feed.")
+# Where the 4:5 window sits vertically (0 = top, 1 = bottom). Anime frames put the subject
+# low under a big empty sky, so their crop keeps the bottom; cinematic frames are centred.
+CROP_ANCHOR = {"anime": 0.9, "cinematic": 0.5}
+SAFE_ZONE = {
+    "anime": "Keep the subject fully inside the frame, slightly above the bottom edge; the top of the sky may be cropped for the feed.",
+    "cinematic": "Keep the subject and anything important inside the central 70% of the image height, "
+                 "because the top and bottom will be cropped for the feed.",
+}
 
 styles = json.loads((ROOT / "style" / "styles.json").read_text(encoding="utf-8"))
 client = genai.Client()
 
 
 def build_prompt(slide):
-    prompt = f"{slide['prompt']}. {styles[slide['style']]} {SAFE_ZONE}"
+    prompt = f"{slide['prompt']}. {styles[slide['style']]} {SAFE_ZONE[slide['style']]}"
     if '"' in slide["prompt"]:  # slide asks for on-image text
         prompt += f" {styles['text_rule']}"
     return prompt
@@ -60,14 +66,26 @@ def image_bytes(prompt):
         raise RuntimeError(f"no image returned: {result.text}")
 
 
-def generate(prompt, out):
-    """Save the 9:16 wallpaper as <n>_916.jpg and its centred 4:5 crop as <n>.jpg."""
-    img = Image.open(io.BytesIO(image_bytes(prompt))).convert("RGB")
-    img.save(out.with_name(f"{out.stem}_916.jpg"), "JPEG", quality=92)
+def crop_feed(img, out, style):
+    """Save the 4:5 feed crop of a 9:16 image as <n>.jpg."""
     w, h = img.size
     crop_h = round(w * 5 / 4)
-    top = (h - crop_h) // 2
+    top = round((h - crop_h) * CROP_ANCHOR[style])
     img.crop((0, top, w, top + crop_h)).save(out, "JPEG", quality=92)
+
+
+def generate(prompt, out, style):
+    """Save the 9:16 wallpaper as <n>_916.jpg and its 4:5 crop as <n>.jpg.
+
+    If <n>_916.jpg already exists (e.g. a test render moved into place), only the crop is made."""
+    full = out.with_name(f"{out.stem}_916.jpg")
+    if full.exists():
+        crop_feed(Image.open(full).convert("RGB"), out, style)
+        return False
+    img = Image.open(io.BytesIO(image_bytes(prompt))).convert("RGB")
+    img.save(full, "JPEG", quality=92)
+    crop_feed(img, out, style)
+    return True
 
 
 def main():
@@ -85,8 +103,8 @@ def main():
                 if out.exists():
                     continue
                 try:
-                    generate(build_prompt(slide), out)
-                    made += 1
+                    if generate(build_prompt(slide), out, slide["style"]):
+                        made += 1
                     print(f"made {out.relative_to(ROOT)}")
                 except Exception as e:  # keep going; the failed slide is retried next run
                     ok = False
