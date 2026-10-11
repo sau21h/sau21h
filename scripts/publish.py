@@ -42,7 +42,7 @@ def wait_ready(container_id):
 
 
 def publish(post):
-    caption = f"{post['caption']}\n.\n{post['hashtags']}"
+    caption = f"{post['caption']}\n{post['hashtags']}"  # short line, #sau21h right under it
     folder = f"{RAW}/posts/{post['date']}"
     # Until video generation is set up, a reel slot without reel.mp4 goes out as its keyframe image.
     if post["format"] == "reel" and (ROOT / "posts" / post["date"] / "reel.mp4").exists():
