@@ -21,7 +21,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 `draft` -> `review` -> `approved` -> `posted`. Nothing is published unless it is `approved`. Trung reviews; Claude re-rolls rejects.
 
 ## Secrets (never print, never commit)
-- GitHub Actions secrets: `GEMINI_API_KEY`, `IG_USER_ID`, `IG_ACCESS_TOKEN`.
+- GitHub Actions secrets: `GEMINI_API_KEY`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, and `THREADS_ACCESS_TOKEN` (optional `THREADS_USER_ID`; publish.py posts to Threads after Instagram, best-effort).
 - `API Key.txt` in this folder is local only and covered by `.gitignore` (`*key*.txt`, `*.env`). Keep it that way.
 - The Instagram token lasts 60 days: remind Trung to renew it in the Meta app and update the secret.
 

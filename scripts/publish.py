@@ -1,9 +1,12 @@
-"""Publish today's approved post (Asia/Ho_Chi_Minh date) to Instagram.
+"""Publish today's approved post (Asia/Ho_Chi_Minh date) to Instagram, then Threads.
 
-Uses the Instagram API with Instagram Login (graph.instagram.com).
-Images are served from this public repo's raw URLs.
+Uses the Instagram API with Instagram Login (graph.instagram.com) and the Threads API
+(graph.threads.net). Images are served from this public repo's raw URLs.
+Threads runs only when THREADS_ACCESS_TOKEN is set; a post already on Instagram but not
+yet on Threads (no "threads_id") is sent to Threads only.
 
 Env: IG_USER_ID, IG_ACCESS_TOKEN, GITHUB_REPOSITORY (set by Actions),
+     THREADS_USER_ID, THREADS_ACCESS_TOKEN (optional),
      GRAPH_VERSION (default v24.0), POST_DATE (optional override, YYYY-MM-DD).
 """
 import datetime
@@ -63,6 +66,52 @@ def publish(post):
     return call("POST", f"{IG_USER}/media_publish", creation_id=cid)["id"]
 
 
+THREADS_API = "https://graph.threads.net/v1.0"
+
+
+def threads_call(method, path, **params):
+    r = requests.request(method, f"{THREADS_API}/{path}",
+                         params={**params, "access_token": os.environ["THREADS_ACCESS_TOKEN"]}, timeout=60)
+    if not r.ok:
+        raise RuntimeError(f"threads {path}: {r.status_code} {r.text}")
+    return r.json()
+
+
+def threads_wait(container_id):
+    for _ in range(30):
+        status = threads_call("GET", container_id, fields="status").get("status")
+        if status == "FINISHED":
+            return
+        if status in ("ERROR", "EXPIRED"):
+            raise RuntimeError(f"threads container {container_id}: {status}")
+        time.sleep(5)
+    raise RuntimeError(f"threads container {container_id} timed out")
+
+
+def publish_threads(post):
+    """Same images and caption on Threads. Uses the full 9:16 wallpaper when it exists."""
+    user = os.environ.get("THREADS_USER_ID") or "me"
+    caption = f"{post['caption']}\n{post['hashtags']}"
+    folder = ROOT / "posts" / post["date"]
+
+    def url(n):
+        name = f"{n}_916.jpg" if (folder / f"{n}_916.jpg").exists() else f"{n}.jpg"
+        return f"{RAW}/posts/{post['date']}/{name}"
+
+    count = len(post["slides"])
+    if count == 1:
+        cid = threads_call("POST", f"{user}/threads", media_type="IMAGE", image_url=url(1), text=caption)["id"]
+    else:
+        children = [threads_call("POST", f"{user}/threads", media_type="IMAGE", image_url=url(n),
+                                 is_carousel_item="true")["id"] for n in range(1, count + 1)]
+        for c in children:
+            threads_wait(c)
+        cid = threads_call("POST", f"{user}/threads", media_type="CAROUSEL",
+                           children=",".join(children), text=caption)["id"]
+    threads_wait(cid)
+    return threads_call("POST", f"{user}/threads_publish", creation_id=cid)["id"]
+
+
 def main():
     today = os.environ.get("POST_DATE") or datetime.datetime.now(
         zoneinfo.ZoneInfo("Asia/Ho_Chi_Minh")).date().isoformat()
@@ -71,13 +120,25 @@ def main():
         for post in posts:
             if post["date"] != today:
                 continue
-            if post["status"] != "approved":
-                print(f"{today}: status is '{post['status']}', not approved — skipping")
+            if post["status"] not in ("approved", "posted"):
+                print(f"{today}: status is '{post['status']}', not approved, skipping")
                 return
-            post["media_id"] = publish(post)
-            post["status"] = "posted"
-            qfile.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            print(f"{today}: posted {post['media_id']}")
+            if post["status"] == "posted" and (post.get("threads_id") or not os.environ.get("THREADS_ACCESS_TOKEN")):
+                print(f"{today}: already posted, skipping")
+                return
+            if post.get("status") == "approved":
+                post["media_id"] = publish(post)
+                post["status"] = "posted"
+                qfile.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                print(f"{today}: posted {post['media_id']}")
+            # Threads is best-effort: a failure there never undoes or blocks the Instagram post.
+            if os.environ.get("THREADS_ACCESS_TOKEN") and not post.get("threads_id"):
+                try:
+                    post["threads_id"] = publish_threads(post)
+                    qfile.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                    print(f"{today}: threads {post['threads_id']}")
+                except Exception as e:
+                    print(f"{today}: threads FAILED {e}")
             return
     print(f"{today}: nothing queued")
 
