@@ -1,5 +1,5 @@
 name: Check Instagram connection
-# Read-only: confirms the token works and shows the posting quota. Never publishes.
+# Read-only: confirms the Instagram and Threads tokens work and shows the posting quota. Never publishes.
 on:
   workflow_dispatch:
   push:
