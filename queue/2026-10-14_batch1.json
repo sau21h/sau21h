@@ -41,7 +41,7 @@
     "date": "2026-10-12",
     "pillar": "Sài Gòn",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Metro số 1 — cặp đôi về chuyến tàu cuối",
     "slides": [
       {
@@ -54,7 +54,8 @@
       }
     ],
     "caption": "chuyến tàu cuối, may mà có người cùng về.",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "media_id": "18077005991480450"
   },
   {
     "date": "2026-10-14",
