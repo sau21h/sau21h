@@ -24,7 +24,7 @@ jobs:
       - run: pip install requests tzdata
       - name: Pick the post date
         run: |
-          if [ -f publish-now.txt ]; then echo "POST_DATE=$(tr -dc '0-9-' < publish-now.txt)" >> "$GITHUB_ENV"; git rm -q publish-now.txt;
+          if [ "${{ github.event_name }}" = "push" ] && [ -f publish-now.txt ]; then echo "POST_DATE=$(tr -dc '0-9-' < publish-now.txt)" >> "$GITHUB_ENV"; git rm -q publish-now.txt;
           elif [ -n "${{ inputs.post_date }}" ]; then echo "POST_DATE=${{ inputs.post_date }}" >> "$GITHUB_ENV"; fi
       - name: Publish
         run: |
