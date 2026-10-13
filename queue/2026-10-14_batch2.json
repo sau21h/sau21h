@@ -3,12 +3,12 @@
     "date": "2026-10-13",
     "pillar": "Hà Nội",
     "format": "carousel",
-    "status": "posted",
+    "status": "approved",
     "hook": "Hà Nội sáng thu: xe đạp, cúc họa mi, Tháp Rùa trong sương",
     "slides": [
       {
         "style": "painterly",
-        "prompt": "Hanoi in autumn, early golden morning. A quiet old street lined with tall ancient trees (like Phan Đình Phùng street), soft sunbeams slanting through the canopy and light haze. One young woman in a light dress cycling slowly away from the camera on a vintage bicycle with a basket of white daisies, small in the middle of the frame, seen from behind. Foreground: a few falling yellow leaves and the edge of a branch, strongly out of focus with creamy bokeh. Palette: warm gold and soft sage green"
+        "prompt": "Hanoi in autumn, early golden morning. A quiet old street lined with tall ancient trees (like Phan Đình Phùng street), soft sunbeams slanting through the canopy and light haze. One young woman in a light dress cycling slowly away from the camera on a vintage bicycle with a basket of white daisies, small in the middle of the frame, seen from behind. Foreground: a few falling yellow leaves and the edge of a branch, strongly out of focus with creamy bokeh. Palette: warm gold and soft sage green [replaced 13/10: flower vendor woman in nón lá walking her flower bicycle, passing motorbikes with slow-shutter motion blur]"
       },
       {
         "style": "painterly",
@@ -16,13 +16,13 @@
       },
       {
         "style": "painterly",
-        "prompt": "Hoàn Kiếm Lake in Hanoi at sunrise: the small Turtle Tower (Tháp Rùa) on its little island as the clear subject, soft morning mist floating on the calm water, the far tree line faint and hazy, low golden sun glow from the side. Foreground: drooping willow branches hanging at the top edge and a few reeds at the bottom, strongly out of focus. Sky a clean soft gradient from pale warm gold to light blue, mostly empty. No moon"
+        "prompt": "Hoàn Kiếm Lake in Hanoi at sunrise: the small Turtle Tower (Tháp Rùa) on its little island as the clear subject, soft morning mist floating on the calm water, the far tree line faint and hazy, low golden sun glow from the side. Foreground: drooping willow branches hanging at the top edge and a few reeds at the bottom, strongly out of focus. Sky a clean soft gradient from pale warm gold to light blue, mostly empty. No moon [replaced 13/10: foreground carpet of purple/pink/white salvia flowers now blooming around Hoàn Kiếm Lake]"
       }
     ],
     "caption": "hà nội vào thu, đạp xe chậm thôi.",
     "hashtags": "#sau21h",
-    "media_id": "18104841767574974",
-    "threads_id": "18119187665067924"
+    "old_media_id": "18104841767574974",
+    "old_threads_id": "18119187665067924"
   },
   {
     "date": "2026-10-14",
