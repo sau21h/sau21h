@@ -3,7 +3,7 @@
     "date": "2026-10-14",
     "pillar": "Hà Nội",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Hà Nội sáng thu: xe đạp, cúc họa mi, Tháp Rùa trong sương",
     "slides": [
       {
@@ -26,7 +26,7 @@
     "date": "2026-10-15",
     "pillar": "Sài Gòn",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Sài Gòn mưa đêm, ở nhà bên cửa sổ",
     "slides": [
       {
@@ -49,7 +49,7 @@
     "date": "2026-10-16",
     "pillar": "Hà Giang",
     "format": "carousel",
-    "status": "draft",
+    "status": "review",
     "hook": "Mùa tam giác mạch Hà Giang, trăng lên",
     "slides": [
       {
