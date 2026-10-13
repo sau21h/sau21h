@@ -102,3 +102,6 @@ time,post,slide,model,size,usd,vnd
 2026-10-11 22:49,2026-10-24,2,gemini-nano-banana-2.1,2K,0.0504,1326
 2026-10-11 22:49,2026-10-25,2,gemini-nano-banana-2.1,2K,0.0504,1326
 2026-10-11 22:55,2026-10-11,2,gemini-nano-banana-2.1,2K,0.0504,1326
+2026-10-13 05:11,test-hagiang,1,gemini-nano-banana-2.1,1K,0.0336,884
+2026-10-13 05:17,test-saigon,1,gemini-nano-banana-2.1,1K,0.0336,884
+2026-10-13 05:17,test-hanoi,1,gemini-nano-banana-2.1,1K,0.0336,884
