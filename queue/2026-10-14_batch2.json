@@ -1,0 +1,71 @@
+[
+  {
+    "date": "2026-10-14",
+    "pillar": "Hà Nội",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Hà Nội sáng thu: xe đạp, cúc họa mi, Tháp Rùa trong sương",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Hanoi in autumn, early golden morning. A quiet old street lined with tall ancient trees (like Phan Đình Phùng street), soft sunbeams slanting through the canopy and light haze. One young woman in a light dress cycling slowly away from the camera on a vintage bicycle with a basket of white daisies, small in the middle of the frame, seen from behind. Foreground: a few falling yellow leaves and the edge of a branch, strongly out of focus with creamy bokeh. Palette: warm gold and soft sage green"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of the woven wicker basket on the front of a vintage bicycle, overflowing with small white Hanoi daisies (cúc họa mi), parked on an old Hanoi street in golden autumn morning light. Behind it the yellow colonial wall and tree trunks are dissolved into soft blur and warm bokeh; a few daisies in the very front are blurred too. Shallow depth of field, gentle sunlight on the petals. Palette: warm gold, cream white and soft sage green"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Hoàn Kiếm Lake in Hanoi at sunrise: the small Turtle Tower (Tháp Rùa) on its little island as the clear subject, soft morning mist floating on the calm water, the far tree line faint and hazy, low golden sun glow from the side. Foreground: drooping willow branches hanging at the top edge and a few reeds at the bottom, strongly out of focus. Sky a clean soft gradient from pale warm gold to light blue, mostly empty. No moon"
+      }
+    ],
+    "caption": "hà nội vào thu, đạp xe chậm thôi.",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-15",
+    "pillar": "Sài Gòn",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Sài Gòn mưa đêm, ở nhà bên cửa sổ",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Night in a cozy Saigon apartment during rain. A large window streaked with raindrops; on the windowsill a warm table lamp glowing and a glass of iced tea (trà đá). Outside, the Saigon skyline is dissolved into soft blurry city lights, with the slender Landmark 81 tower just recognisable in the distance through the rain. Foreground: the edge of a sheer curtain, out of focus. Palette: soft blue-grey rain outside with warm amber lamplight inside"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Night in a cozy Saigon apartment during rain. A young person seen from behind, sitting on a wide window seat wrapped in a soft knitted blanket, looking out at the rainy city, small in the frame. A warm lamp beside them; outside the rain-streaked glass the city lights are blurred into soft blue and gold bokeh. Foreground: a potted plant leaf, out of focus. Calm, safe, cozy, not lonely. Palette: soft blue-grey with warm amber lamplight"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of raindrops running down a window pane at night, sharp only on a few drops, with warm orange and soft blue city lights of Saigon behind dissolved into large round bokeh. On the inside windowsill at the bottom edge, a small green plant in a terracotta pot catches the warm lamplight. Palette: soft blue with warm orange accents"
+      }
+    ],
+    "caption": "sài gòn mưa, ở nhà là đẹp nhất.",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-16",
+    "pillar": "Hà Giang",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Mùa tam giác mạch Hà Giang, trăng lên",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Hà Giang, northern Vietnam, at moonrise just after sunset. Low camera angle from inside a field of blooming pink buckwheat flowers (tam giác mạch): the closest flowers fill the bottom of the frame, strongly out of focus, pink and white with a few lavender tones. In the middle ground, one small brown Hà Giang pony grazing alone in the flower field, small in the frame. Behind it, the distinctive steep limestone karst peaks of Đồng Văn, layered in soft blue-violet haze with thin mist in the valley. A large, warm pale-gold full moon rising low just above the karst ridgeline. The sky a smooth pastel gradient from periwinkle blue at the top through lavender to soft rose pink near the horizon, filling the top half of the frame, almost empty"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Hà Giang at golden hour. A narrow dirt path winding through a wide field of pink buckwheat flowers (tam giác mạch). One young woman in a long flowing skirt walking away along the path, seen from behind, small in the middle of the frame, her hair lifted slightly by the breeze. Behind, soft hazy limestone karst mountains of Đồng Văn and a warm low sun glow. Foreground: buckwheat flowers strongly out of focus. Palette: peach, rose pink and soft lavender"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of pink and white buckwheat flowers (tam giác mạch) in Hà Giang at dusk, a few blossoms in soft focus in the front, most of the frame dissolving into creamy pink bokeh, and the jagged karst ridgeline faint and hazy far behind. The sky above a smooth pastel gradient from periwinkle to rose pink, almost empty. No moon"
+      }
+    ],
+    "caption": "trăng lên ở hà giang 🌙",
+    "hashtags": "#sau21h"
+  }
+]
