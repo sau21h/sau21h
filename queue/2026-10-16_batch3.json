@@ -1,0 +1,71 @@
+[
+  {
+    "date": "2026-10-16",
+    "pillar": "Đà Lạt",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Dã quỳ ven hồ Tuyền Lâm",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Đà Lạt, Vietnam, bright clear morning. A quiet winding road on a pine-covered hill above Tuyền Lâm Lake, lined on both sides with tall bushes of blooming yellow wild sunflowers (dã quỳ). The calm blue lake and soft rolling pine hills visible below in light haze. Foreground: yellow wild sunflowers strongly out of focus. No people. Palette: bright warm yellow, pine green and clear soft blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of a few yellow wild sunflowers (dã quỳ) in Đà Lạt, sharp only on one flower, morning sunlight glowing through the petals, the blue water of Tuyền Lâm Lake and pine hills behind dissolved into soft blur and bokeh. Clear soft blue sky at the top. Palette: warm yellow, soft blue, pine green"
+      },
+      {
+        "style": "painterly",
+        "prompt": "A tall pine forest on a hillside near Tuyền Lâm Lake in Đà Lạt in early morning mist, soft sunbeams slanting between the pine trunks, a scattering of yellow wild sunflowers (dã quỳ) along the forest edge. Foreground: pine needles and one sunflower out of focus. No people. Palette: misty sage green with warm yellow accents"
+      }
+    ],
+    "caption": "Tuyền Lâm vào mùa dã quỳ.",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-17",
+    "pillar": "Hội An",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Tối thứ 7 bên sông Hoài",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Hội An ancient town at night. The Japanese Covered Bridge (Chùa Cầu) glowing with warm light, strings of colourful silk lanterns along the old yellow houses, all reflected in the calm Hoài River. Foreground: a hanging silk lantern at the top corner, strongly out of focus. Deep teal night sky, clean and mostly empty. Palette: deep teal with warm lantern gold and soft red"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Hội An at night on the Hoài River. A young Vietnamese couple seen from behind, sitting in a small wooden boat, gently placing a glowing paper flower lantern on the dark water. A Vietnamese boat woman in a nón lá at the stern, small and soft. Old yellow houses and lantern strings blurred into warm bokeh across the river. Palette: deep teal with warm lantern gold"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of several small paper flower lanterns with candles floating on the dark Hoài River in Hội An, one lantern in soft focus, the rest and the lit old houses behind dissolved into large warm golden bokeh reflected in the ripples. Palette: deep teal water with warm gold and soft pink light"
+      }
+    ],
+    "caption": "tối thứ 7 bên sông Hoài.",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-18",
+    "pillar": "Hà Nội",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Cà phê sáng chủ nhật nhìn ra Hồ Tây",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Inside a quiet old café in Hanoi on a Sunday morning: a wide open window with weathered green wooden shutters looking out over West Lake (Hồ Tây). Across the calm water, the tall red brick tower of Trấn Quốc Pagoda is soft in the light morning mist. On the wooden windowsill a cup of Vietnamese egg coffee (cà phê trứng) in a small bowl of hot water. Foreground: the edge of a shutter and a hanging plant, out of focus. No people. Palette: cream, sage green and soft morning gold"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of a cup of Vietnamese egg coffee (cà phê trứng) with its thick golden foam, sitting in a small bowl of hot water on an old wooden windowsill in Hanoi, warm morning sunlight falling across it, the misty surface of West Lake (Hồ Tây) behind dissolved into soft pale blur. Palette: cream, warm gold and pale sage"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of soft steam rising from a coffee cup on a windowsill in morning sunlight, the steam glowing in the light, West Lake (Hồ Tây) in Hanoi beyond the window completely dissolved into pale misty blur with a faint silhouette of Trấn Quốc Pagoda. Palette: soft cream, pale blue-grey and warm gold"
+      }
+    ],
+    "caption": "chủ nhật, cà phê nhìn ra Hồ Tây.",
+    "hashtags": "#sau21h"
+  }
+]
