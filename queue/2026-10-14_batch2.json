@@ -3,7 +3,7 @@
     "date": "2026-10-13",
     "pillar": "Hà Nội",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Hà Nội sáng thu: xe đạp, cúc họa mi, Tháp Rùa trong sương",
     "slides": [
       {
@@ -20,7 +20,9 @@
       }
     ],
     "caption": "hà nội vào thu, đạp xe chậm thôi.",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "media_id": "18104841767574974",
+    "threads_id": "18119187665067924"
   },
   {
     "date": "2026-10-14",
