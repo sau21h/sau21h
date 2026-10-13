@@ -33,6 +33,8 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 - Style switch: the page moves completely to soft painterly realism (learned from Threads @odwyer_sio9); style key `painterly` in `style/styles.json`. Moon and people only sometimes; mix day/night, indoor/outdoor; rotate palettes; no clear faces.
 - All batch 1 `approved` posts set to `retired` (publish.py skips them), so nothing posts until the new batch is approved. Tests: `posts/tests/` (Hà Giang, Sài Gòn, Hà Nội, 1K, rendered locally).
 - Generate 3 posts per round, concept table first.
+- Round 1 (`queue/2026-10-14_batch2.json`) approved: 13/10 Hà Nội thu, 14/10 Sài Gòn mưa, 15/10 Hà Giang tam giác mạch. Retired batch 1 posts were renamed `retired-<date>` (queue and posts folders) so their dates are free. Next round needed for 16/10 onwards.
+- Trung topped up again on 13/10 (amount not yet logged in `logs/credit.json`).
 
 ## Status as of 12/10/2026 (evening)
 - Posted: 11/10 "mai lại thứ hai rồi" (2-image carousel; Threads copy shared manually from the app) and 12/10 metro (Instagram + Threads via API).
