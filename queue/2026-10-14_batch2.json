@@ -1,9 +1,9 @@
 [
   {
-    "date": "2026-10-14",
+    "date": "2026-10-13",
     "pillar": "Hà Nội",
     "format": "carousel",
-    "status": "review",
+    "status": "approved",
     "hook": "Hà Nội sáng thu: xe đạp, cúc họa mi, Tháp Rùa trong sương",
     "slides": [
       {
@@ -23,10 +23,10 @@
     "hashtags": "#sau21h"
   },
   {
-    "date": "2026-10-15",
+    "date": "2026-10-14",
     "pillar": "Sài Gòn",
     "format": "carousel",
-    "status": "review",
+    "status": "approved",
     "hook": "Sài Gòn mưa đêm, ở nhà bên cửa sổ",
     "slides": [
       {
@@ -46,10 +46,10 @@
     "hashtags": "#sau21h"
   },
   {
-    "date": "2026-10-16",
+    "date": "2026-10-15",
     "pillar": "Hà Giang",
     "format": "carousel",
-    "status": "review",
+    "status": "approved",
     "hook": "Mùa tam giác mạch Hà Giang, trăng lên",
     "slides": [
       {
