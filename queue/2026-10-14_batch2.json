@@ -30,7 +30,7 @@
     "date": "2026-10-14",
     "pillar": "Sài Gòn",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Sài Gòn mưa đêm, ở nhà bên cửa sổ",
     "slides": [
       {
@@ -47,7 +47,9 @@
       }
     ],
     "caption": "Sài Gòn mưa, ở nhà là đẹp nhất.",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "media_id": "18143014552589733",
+    "threads_id": "18076135466457608"
   },
   {
     "date": "2026-10-15",
