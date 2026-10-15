@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-10-22",
+    "pillar": "Tà Xùa",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Săn mây Tà Xùa: sống lưng khủng long, cây cô đơn, trà Shan tuyết",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Tà Xùa, Bắc Yên, Sơn La, northern Vietnam, at sunrise. The famous 'dinosaur spine' ridge (sống lưng khủng long): a narrow, steep grassy mountain ridge with a thin footpath along its crest, rising out of a vast sea of white clouds that fills the valleys below and stretches to distant blue mountain peaks on the horizon. One young Vietnamese woman in a modern stylish trekking outfit walking along the ridge path, small in the middle of the frame, natural relaxed moment. Foreground: wild grass and a few wild flowers on the ridge, strongly out of focus. Soft peach and gold sunrise light glowing on the clouds. Palette: peach dawn, soft blue and cloud white"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Tà Xùa, Sơn La, northern Vietnam, at dawn. The famous lonely tree of Tà Xùa (cây cô đơn): one single tree standing alone on top of a gentle grassy hill, and below it an endless sea of soft white clouds flowing between the mountains all the way to the horizon. No people. Foreground: tall wild grass on the hill, strongly out of focus. Sky a clean soft gradient from rose pink near the horizon to pale blue above, mostly empty. Palette: rose pink, soft blue and cloud white"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Inside a cozy wooden H'Mông-style homestay in Tà Xùa, Sơn La, early morning. A wide open wooden window frames a sea of white clouds rolling over the mountains outside in soft golden sunrise light. On the wooden windowsill, a small cup of hot Shan tuyết green tea with gentle steam rising and glowing in the light, next to a small clay teapot. Foreground: the edge of the wooden window frame and a woven textile, out of focus. No people. Palette: warm wood brown, soft gold and cloud white"
+      }
+    ],
+    "caption": "mây Tà Xùa, dậy sớm là được.",
+    "share": "tag đứa hay hứa đi săn mây cùng bạn.",
+    "hashtags": "#sau21h"
+  }
+]
