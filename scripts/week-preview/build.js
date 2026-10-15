@@ -1,6 +1,6 @@
 // Builds the Threads-style weekly review page for @sau21h.
-// Usage: node build.js 2026-10-19   (run thumbs.ps1 with the same start date first)
-// Reads queue/*.json for the 7 days from the start date, thumbs/<date>/NN.jpg and notes.json
+// Usage: node build.js 2026-10-19 [days, default 7]   (run thumbs.ps1 with the same start and days first)
+// Reads queue/*.json for the days from the start date, thumbs/<date>/NN.jpg and notes.json
 // ({"2026-10-20": ["slide 1: ..."]}), writes sau21h-week-preview.html next to this file.
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +21,8 @@ const DOW = ['Chủ nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 
 const ddmm = d => d.slice(8, 10) + '/' + d.slice(5, 7);
 
 const days = [];
-for (let i = 0; i < 7; i++) {
+const nDays = +(process.argv[3] || 7);
+for (let i = 0; i < nDays; i++) {
   const t = new Date(start + 'T12:00:00Z'); t.setUTCDate(t.getUTCDate() + i);
   const date = t.toISOString().slice(0, 10);
   const p = posts[date];
@@ -39,7 +40,7 @@ for (let i = 0; i < 7; i++) {
   }
   days.push(day);
 }
-const end = days[6].short;
+const end = days[days.length - 1].short;
 const week = { range: days[0].short + ' đến ' + end, built: ddmm(new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10)), days };
 const tpl = fs.readFileSync(path.join(dir, 'template.html'), 'utf8');
 const out = tpl.replace('/*WEEK_DATA*/null', JSON.stringify(week));
