@@ -45,7 +45,8 @@ def wait_ready(container_id):
 
 
 def publish(post):
-    caption = f"{post['caption']}\n{post['hashtags']}"  # short line, #sau21h right under it
+    # short line, optional share prompt, then #sau21h
+    caption = "\n".join(filter(None, [post["caption"], post.get("share"), post["hashtags"]]))
     folder = f"{RAW}/posts/{post['date']}"
     # Until video generation is set up, a reel slot without reel.mp4 goes out as its keyframe image.
     if post["format"] == "reel" and (ROOT / "posts" / post["date"] / "reel.mp4").exists():
@@ -89,9 +90,10 @@ def threads_wait(container_id):
 
 
 def publish_threads(post):
-    """Same images and caption on Threads. Uses the full 9:16 wallpaper when it exists."""
+    """Same images and caption on Threads, without hashtags (Threads turns them into a topic tag).
+    Uses the full 9:16 wallpaper when it exists."""
     user = os.environ.get("THREADS_USER_ID") or "me"
-    caption = f"{post['caption']}\n{post['hashtags']}"
+    caption = "\n".join(filter(None, [post["caption"], post.get("share")]))
     folder = ROOT / "posts" / post["date"]
 
     def url(n):
