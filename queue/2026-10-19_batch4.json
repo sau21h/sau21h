@@ -3,7 +3,7 @@
     "date": "2026-10-19",
     "pillar": "An Giang",
     "format": "carousel",
-    "status": "review",
+    "status": "approved",
     "hook": "Trà Sư mùa nước nổi",
     "slides": [
       {
@@ -27,7 +27,7 @@
     "date": "2026-10-20",
     "pillar": "20/10",
     "format": "carousel",
-    "status": "review",
+    "status": "approved",
     "hook": "20/10 mua hoa cho mẹ ở chợ hoa Hồ Thị Kỷ",
     "slides": [
       {
@@ -51,16 +51,16 @@
     "date": "2026-10-21",
     "pillar": "Huế",
     "format": "carousel",
-    "status": "review",
+    "status": "approved",
     "hook": "Hoa đăng dưới cầu Trường Tiền",
     "slides": [
       {
         "style": "painterly",
-        "prompt": "Huế, Vietnam, at night: the Trường Tiền Bridge with its six graceful steel arches lit up in soft shifting colour lights, reflected in the calm, wide Perfume River (sông Hương). A few small paper flower lanterns (hoa đăng) with candles float on the dark water in the foreground. Deep blue night sky, clean and mostly empty. No people. Foreground: a few riverside leaves, strongly out of focus. Palette: deep blue night with warm gold and soft violet light"
+        "prompt": "The Perfume River in Huế at night: many small paper flower lanterns (hoa đăng) with candles drifting slowly on the dark water, their warm reflections trembling, and further out a lit wooden dragon boat with warm lanterns, small and soft. The arches of the Trường Tiền Bridge glow faintly in the distance. No people visible. Palette: deep blue and violet water with warm candle gold"
       },
       {
         "style": "painterly",
-        "prompt": "The Perfume River in Huế at night: many small paper flower lanterns (hoa đăng) with candles drifting slowly on the dark water, their warm reflections trembling, and further out a lit wooden dragon boat with warm lanterns, small and soft. The arches of the Trường Tiền Bridge glow faintly in the distance. No people visible. Palette: deep blue and violet water with warm candle gold"
+        "prompt": "Huế, Vietnam, at night: the Trường Tiền Bridge with its six graceful steel arches lit up in soft shifting colour lights, reflected in the calm, wide Perfume River (sông Hương). A few small paper flower lanterns (hoa đăng) with candles float on the dark water in the foreground. Deep blue night sky, clean and mostly empty. No people. Foreground: a few riverside leaves, strongly out of focus. Palette: deep blue night with warm gold and soft violet light"
       },
       {
         "style": "painterly",
