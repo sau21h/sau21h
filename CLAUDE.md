@@ -60,3 +60,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 3. Settle bio and avatar.
 4. After every render, report to Trung: spent this run, total spent, estimated balance (`logs/spend_summary.txt`).
 5. Later: wallpaper packs; comment-to-DM only once there is something to deliver.
+
+## Weekly review page (since 15/10/2026)
+- Each week Trung reviews the next 7 days (Mon to Sun) on a Threads-style preview artifact: https://claude.ai/artifact/PKhHmHpU36cxiBdeBtwMgC (republish to the same URL every week). Approvals and edits come in chat, then Claude sets statuses in the queue.
+- Build: `powershell -File scripts/week-preview/thumbs.ps1 -Start <monday>` then `node scripts/week-preview/build.js <monday>`; publish `scripts/week-preview/sau21h-week-preview.html`. Flag known issues per date in `scripts/week-preview/notes.json`. Thumbs and the HTML are gitignored.

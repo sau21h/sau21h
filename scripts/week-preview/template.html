@@ -1,0 +1,172 @@
+<title>sau21h Week Preview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one Threads-width feed column; sticky day dividers; each post = avatar rail + content; tall 9:16 carousel scrolls sideways inside the post */
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #8a8a8f;
+  --line: #e7e6ea;
+  --night: #1b1f3a;          /* avatar: the 9pm sky */
+  --moon: #f3d58a;
+  --chip-wait-bg: #fff3d6; --chip-wait-fg: #8a5a00;
+  --chip-ok-bg: #e3f5e8; --chip-ok-fg: #1d6b35;
+  --chip-done-bg: #ececec; --chip-done-fg: #555555;
+  --note-bg: #fff8ea; --note-line: #f0d9a8; --note-fg: #5c4100;
+  --overlay: rgba(0,0,0,.92);
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #101010; --fg: #f3f5f7; --muted: #7a7a80; --line: #2a2a2d;
+  --night: #2a3060; --moon: #f3d58a;
+  --chip-wait-bg: #3a2c0a; --chip-wait-fg: #ffd27a;
+  --chip-ok-bg: #12301c; --chip-ok-fg: #8fe0a8;
+  --chip-done-bg: #262626; --chip-done-fg: #bbbbbb;
+  --note-bg: #241d0e; --note-line: #4a3a14; --note-fg: #f2d79c;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #101010; --fg: #f3f5f7; --muted: #7a7a80; --line: #2a2a2d;
+  --night: #2a3060; --moon: #f3d58a;
+  --chip-wait-bg: #3a2c0a; --chip-wait-fg: #ffd27a;
+  --chip-ok-bg: #12301c; --chip-ok-fg: #8fe0a8;
+  --chip-done-bg: #262626; --chip-done-fg: #bbbbbb;
+  --note-bg: #241d0e; --note-line: #4a3a14; --note-fg: #f2d79c;
+  color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 15px/1.4 var(--font-ui); }
+.wrap { max-width: 620px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 60px; }
+
+header.top { display: grid; gap: 10px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+header.top h1 { margin: 0; font: 700 22px/1.2 var(--font-ui); text-wrap: balance; }
+header.top .sub { color: var(--muted); font-size: 13px; }
+.stats { display: flex; flex-wrap: wrap; gap: 6px; }
+.stat { font-size: 13px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; font-variant-numeric: tabular-nums; }
+.stat.warn { background: var(--note-bg); border-color: var(--note-line); color: var(--note-fg); }
+
+.day { display: flex; align-items: baseline; gap: 8px; padding: 22px 0 6px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 2; }
+.day b { font-size: 15px; }
+.day span { color: var(--muted); font-size: 13px; }
+
+.post { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 10px; padding: 12px 0 14px; border-bottom: 1px solid var(--line); }
+.avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--night); position: relative; overflow: hidden; }
+.avatar::after { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--moon); right: 8px; top: 8px; box-shadow: -3px 2px 0 0 var(--night) inset; }
+.head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.handle { font-weight: 600; }
+.when { color: var(--muted); font-variant-numeric: tabular-nums; }
+.chip { font-size: 11.5px; font-weight: 600; letter-spacing: .02em; padding: 2px 8px; border-radius: 999px; }
+.chip.review, .chip.draft { background: var(--chip-wait-bg); color: var(--chip-wait-fg); }
+.chip.approved { background: var(--chip-ok-bg); color: var(--chip-ok-fg); }
+.chip.posted { background: var(--chip-done-bg); color: var(--chip-done-fg); }
+.meta { color: var(--muted); font-size: 12.5px; margin-top: 1px; }
+.caption { white-space: pre-wrap; margin: 6px 0 10px; overflow-wrap: anywhere; }
+.ig { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+
+.carousel { display: flex; gap: 6px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-right: 16px; scrollbar-width: thin; }
+.slide { position: relative; flex: 0 0 auto; height: min(70vw, 340px); aspect-ratio: 9 / 16; max-width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); scroll-snap-align: start; padding: 0; background: var(--line); cursor: zoom-in; }
+.slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.slide:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.badge { position: absolute; left: 6px; top: 6px; font: 600 11px var(--font-ui); color: #fff; background: rgba(0,0,0,.55); border-radius: 4px; padding: 1px 5px; font-variant-numeric: tabular-nums; }
+
+.actions { display: flex; gap: 18px; color: var(--fg); margin-top: 6px; opacity: .85; }
+.actions svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
+
+.notes { margin-top: 10px; background: var(--note-bg); border: 1px solid var(--note-line); color: var(--note-fg); border-radius: 10px; padding: 8px 12px; font-size: 13.5px; display: grid; gap: 4px; }
+.notes b { font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; }
+.notes ul { margin: 0; padding-left: 18px; display: grid; gap: 3px; }
+.empty { margin: 4px 0 6px; border: 1.5px dashed var(--line); border-radius: 12px; padding: 18px; color: var(--muted); text-align: center; font-size: 14px; }
+
+.lb { position: fixed; inset: 0; background: var(--overlay); z-index: 10; display: grid; grid-template-rows: auto 1fr auto; padding: calc(12px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); color: #fff; }
+.lb-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; }
+.lb-stage { display: grid; place-items: center; min-height: 0; }
+.lb-stage img { max-width: min(92vw, 480px); max-height: 80vh; border-radius: 8px; }
+.lb-nav { display: flex; justify-content: center; gap: 12px; }
+.lb button { background: rgba(255,255,255,.14); color: #fff; border: 0; border-radius: 999px; padding: 8px 16px; font: 600 14px var(--font-ui); cursor: pointer; }
+.lb button:focus-visible { outline: 2px solid #fff; }
+@media (prefers-reduced-motion: no-preference) { .slide img { transition: transform .2s } .slide:hover img { transform: scale(1.02) } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1 id="h"></h1>
+    <div class="sub" id="sub"></div>
+    <div class="stats" id="stats"></div>
+  </header>
+  <main id="feed"></main>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Xem slide">
+  <div class="lb-top"><span id="lb-title"></span><button id="lb-close" type="button">Đóng</button></div>
+  <div class="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-nav"><button id="lb-prev" type="button">‹ Trước</button><span id="lb-count" style="align-self:center;font-variant-numeric:tabular-nums"></span><button id="lb-next" type="button">Sau ›</button></div>
+</div>
+
+<script>
+const WEEK = /*WEEK_DATA*/null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const LABEL = { draft: 'Đang làm', review: 'Chờ duyệt', approved: 'Đã duyệt', posted: 'Đã đăng' };
+const icons = {
+  like: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  reply: '<path d="M20 12a8 8 0 1 1-3.2-6.4L20 4v5h-5"/>',
+  repost: '<path d="M17 3l3 3-3 3M20 6H8a4 4 0 0 0-4 4v1M7 21l-3-3 3-3M4 18h12a4 4 0 0 0 4-4v-1"/>',
+  share: '<path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/>'
+};
+const svg = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[k]}</svg>`;
+const posts = [];
+WEEK.days.forEach(d => { if (d.post) { d.post.idx = posts.length; d.post.day = d; posts.push(d.post); } });
+
+const waiting = posts.filter(p => p.status === 'review' || p.status === 'draft').length;
+const flagged = posts.filter(p => p.notes.length).length;
+const emptyDays = WEEK.days.filter(d => !d.post).length;
+$('h').textContent = 'Tuần ' + WEEK.range;
+$('sub').textContent = '@sau21h · dựng ngày ' + WEEK.built + ' · đăng 21:00 mỗi ngày · bấm vào ảnh để xem to · cần sửa gì thì nhắn Claude trong chat';
+$('stats').innerHTML = [
+  `<span class="stat">${posts.length} bài</span>`,
+  `<span class="stat${waiting ? ' warn' : ''}">${waiting} chờ duyệt</span>`,
+  `<span class="stat${flagged ? ' warn' : ''}">${flagged} bài cần xem lại</span>`,
+  `<span class="stat${emptyDays ? ' warn' : ''}">${emptyDays} ngày trống</span>`
+].join('');
+
+function postHtml(p) {
+  const slides = p.slides.map((src, j) => `
+    <button class="slide" type="button" data-p="${p.idx}" data-s="${j}" aria-label="${esc(p.pillar)}, ảnh ${j + 1}">
+      <img src="${src}" alt="" loading="lazy">
+      <span class="badge">${j + 1}/${p.slides.length}</span>
+    </button>`).join('');
+  const notes = p.notes.length ? `<div class="notes"><b>Cần xem</b><ul>${p.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul></div>` : '';
+  return `
+    <article class="post">
+      <div class="avatar" aria-hidden="true"></div>
+      <div style="min-width:0">
+        <div class="head"><span class="handle">sau21h</span><span class="when">21:00</span><span class="chip ${p.status}">${LABEL[p.status] || p.status}</span></div>
+        <div class="meta">${esc(p.pillar)} · ${p.slides.length} ảnh</div>
+        <div class="caption">${esc(p.threads)}</div>
+        <div class="carousel">${slides}</div>
+        <div class="actions">${svg('like')}${svg('reply')}${svg('repost')}${svg('share')}</div>
+        <div class="ig">Instagram: cùng caption, thêm dòng #sau21h · ảnh 9:16 đặt trong khung 4:5</div>
+        ${notes}
+      </div>
+    </article>`;
+}
+$('feed').innerHTML = WEEK.days.map(d =>
+  `<div class="day"><b>${d.label} · ${d.short}</b><span>${d.post ? esc(d.post.hook) : ''}</span></div>` +
+  (d.post ? postHtml(d.post) : `<div class="empty">Chưa có bài cho ngày này</div>`)).join('');
+
+let cur = null, last = null;
+function show() {
+  const p = posts[cur.p];
+  $('lb-img').src = p.slides[cur.s];
+  $('lb-title').textContent = p.day.label + ' ' + p.day.short + ' · ' + p.pillar;
+  $('lb-count').textContent = (cur.s + 1) + ' / ' + p.slides.length;
+}
+function openLb(pi, si, from) { cur = { p: pi, s: si }; last = from; show(); $('lb').hidden = false; $('lb-next').focus(); }
+function closeLb() { $('lb').hidden = true; if (last && document.contains(last)) last.focus(); }
+function step(n) { const len = posts[cur.p].slides.length; cur.s = (cur.s + n + len) % len; show(); }
+$('feed').addEventListener('click', e => { const s = e.target.closest('.slide'); if (s) openLb(+s.dataset.p, +s.dataset.s, s); });
+$('lb-close').onclick = closeLb; $('lb-prev').onclick = () => step(-1); $('lb-next').onclick = () => step(1);
+$('lb').addEventListener('click', e => { if (e.target === $('lb') || e.target.classList.contains('lb-stage')) closeLb(); });
+document.addEventListener('keydown', e => {
+  if ($('lb').hidden) return;
+  if (e.key === 'Escape') closeLb(); else if (e.key === 'ArrowRight') step(1); else if (e.key === 'ArrowLeft') step(-1);
+});
+</script>

@@ -3,3 +3,5 @@
 *Key*.txt
 *.env
 .env*
+scripts/week-preview/thumbs/
+scripts/week-preview/sau21h-week-preview.html
