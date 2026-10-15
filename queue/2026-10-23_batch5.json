@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-10-23",
+    "pillar": "Sài Gòn",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Thứ 6, ban công chung cư 42 Nguyễn Huệ nhìn xuống phố đi bộ, trăng lên",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Saigon on a Friday night, seen from a small café balcony of the old apartment building at 42 Nguyễn Huệ: warm string lights and potted plants along a simple metal balcony rail in the foreground (out of focus), and below, the wide Nguyễn Huệ walking street glowing with warm lights and fountains, crowds of young people strolling as soft small blurs, the Saigon City Hall (Ủy ban Nhân dân) softly lit at the far end of the boulevard. A large warm pale-gold full moon rising in the deep blue sky above the skyline. No readable text or signs anywhere. Palette: deep night blue with warm amber lights"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Night on a small café balcony at 42 Nguyễn Huệ in Saigon: a young Vietnamese woman in a modern oversized shirt and wide-leg trousers, with a cup of iced coffee, leaning relaxed on the metal rail, seen from behind and slightly from the side, looking at a large warm full moon over the glowing city skyline; below her the Nguyễn Huệ walking street lights blur into soft bokeh. Warm string lights overhead, a potted plant beside her. Natural candid moment. No readable text or signs. Palette: deep night blue with warm amber"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up on a café balcony in Saigon at night: warm glowing string-light bulbs and a small potted plant on a metal rail, a glass of Vietnamese iced coffee (cà phê sữa đá) with condensation on the rail, and the lights of Nguyễn Huệ walking street far below dissolved into large soft golden bokeh, a bit of the full moon glowing in the dark sky at the top corner. No readable text. Palette: deep blue with warm gold"
+      }
+    ],
+    "caption": "thứ 6, Nguyễn Huệ nhẹ tênh.",
+    "share": "tag đứa hay rủ bạn lên 42 Nguyễn Huệ ngồi cà phê.",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-24",
+    "pillar": "Ninh Bình",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Tràng An sáng sớm, sương còn chưa tan",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Tràng An, Ninh Bình, Vietnam, early morning: a calm green river winding between towering limestone karst peaks wrapped in soft morning mist. One small metal-and-wood tourist rowboat glides on the water, small in the middle of the frame: a local rower (a middle-aged Vietnamese woman in a conical hat, as Tràng An rowers really wear, with a long-sleeve sun-protection jacket) and two young Vietnamese visitors in modern casual clothes wearing the orange life vests that are required there. Foreground: reeds and leaves at the water's edge, strongly out of focus. Palette: misty sage green and soft silver with a touch of warm morning light"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Tràng An, Ninh Bình, early morning: the low arched mouth of a limestone river cave, seen from inside the darkness looking out, the opening glowing with soft misty morning light, the calm green water reflecting it, a small rowboat with orange life vests just entering the light, small and soft. Palette: deep shadow green with glowing soft gold and misty white"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up at water level on the river in Tràng An, Ninh Bình, early morning: tall reeds and water grasses in soft focus, tiny dew drops, calm green water with thin mist drifting on its surface, and the karst peaks behind dissolved into pale misty silhouettes. No people. Palette: misty green, silver and soft white"
+      }
+    ],
+    "caption": "Tràng An, sương còn chưa tan.",
+    "share": "gửi cho người bạn muốn cùng đi Ninh Bình cuối tuần.",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-25",
+    "pillar": "Hà Nội",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Cỏ lau Bãi Giữa sông Hồng, chiều chủ nhật, cầu Long Biên",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Hanoi, late afternoon sunset on the Red River sandbank (Bãi Giữa): a wide field of tall white reed flowers (cỏ lau) glowing in warm backlight, and behind them the long old steel truss Long Biên Bridge stretching across the frame, a short train crossing it, soft haze over the river. Foreground: reed plumes strongly out of focus. No people. Sky a smooth gradient from peach near the horizon to pale blue above, mostly empty. Palette: peach, warm white and soft gold"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Hanoi, sunset on the Red River sandbank (Bãi Giữa): a young Vietnamese woman in a simple modern cream linen shirt and wide trousers, a canvas tote on her shoulder, walking slowly away along a narrow path through tall white reed flowers (cỏ lau), her hand brushing the reeds, seen from behind, small in the frame, natural candid moment. The Long Biên Bridge soft in the warm haze behind. Foreground: reed plumes strongly out of focus. Palette: peach, warm white and soft gold"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of white reed flower plumes (cỏ lau) glowing against the low sunset sun on the Red River sandbank in Hanoi, soft backlight making the feathery plumes shine, a faint silhouette of the Long Biên Bridge dissolved into warm bokeh behind. No people. Palette: peach, warm gold and soft white"
+      }
+    ],
+    "caption": "cỏ lau Bãi Giữa, chiều chủ nhật.",
+    "share": "tag đứa hay rủ bạn đi chụp ảnh cỏ lau.",
+    "hashtags": "#sau21h"
+  }
+]
