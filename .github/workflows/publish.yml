@@ -1,7 +1,8 @@
 name: Publish daily post
 on:
   schedule:
-    - cron: "0 14 * * *"    # 21:00 Vietnam time
+    - cron: "30 13 * * *"   # 20:30 Vietnam time; the job waits until 21:00 (GitHub cron often starts late)
+    - cron: "30 14 * * *"   # 21:30 backup in case the first run is skipped; publish.py skips posts already posted
   workflow_dispatch:
     inputs:
       post_date:
@@ -26,6 +27,11 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "push" ] && [ -f publish-now.txt ]; then echo "POST_DATE=$(tr -dc '0-9-' < publish-now.txt)" >> "$GITHUB_ENV"; git rm -q publish-now.txt;
           elif [ -n "${{ inputs.post_date }}" ]; then echo "POST_DATE=${{ inputs.post_date }}" >> "$GITHUB_ENV"; fi
+      - name: Wait until 21:00 Vietnam time
+        if: github.event_name == 'schedule'
+        run: |
+          now=$(date -u +%s); target=$(date -u -d "today 14:00" +%s)
+          if [ "$now" -lt "$target" ]; then echo "waiting $((target - now))s"; sleep $((target - now)); fi
       - name: Publish
         run: |
           mkdir -p logs

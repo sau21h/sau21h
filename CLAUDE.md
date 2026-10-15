@@ -12,7 +12,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 - `style/styles.json`: the two house styles appended to every prompt. `style/fonts/NotoSerif-Italic.ttf` is the subtitle font.
 - `scripts/generate.py`: renders every `draft` post with Gemini (default `gemini-nano-banana-2.1`, 2K, 9:16). Writes `posts/<date>/<n>_916.jpg` (wallpaper) and `<n>.jpg` (9:16 centred on a black 4:5 1080x1350 canvas for the IG feed). Subtitles are drawn by the script, never by the model (`<n>_raw.jpg` keeps the clean image). Moves posts `draft` -> `review`. To re-roll a slide, delete both its files and run again.
 - `scripts/publish.py`: publishes today's `approved` post to Instagram (graph.instagram.com), then Threads (graph.threads.net, full 9:16 images, best-effort), using the public raw GitHub URLs. Records `media_id` and `threads_id`.
-- `.github/workflows/`: `generate.yml` (Generate images), `publish.yml` (daily cron `0 14 * * *` = 21:00 VN; can also publish immediately by committing `publish-now.txt` containing the post date), `ig-check.yml` (connection and quota check, writes `logs/ig_check.txt`).
+- `.github/workflows/`: `generate.yml` (Generate images), `publish.yml` (cron 20:30 VN, job waits until 21:00; backup run 21:30; can also publish immediately by committing `publish-now.txt` containing the post date), `ig-check.yml` (connection and quota check, writes `logs/ig_check.txt`).
 - `logs/`: `publish_log.txt`, `spend.csv` and `spend_summary.txt` (Gemini cost tracking), `credit.json` (prepay top-ups; add a line on each top-up).
 - `review.html`: contact sheet for reviewing generated images.
 - `posts/profile/`: avatar candidates (not for posting).
