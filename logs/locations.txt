@@ -1,9 +1,11 @@
-2026-10-17 Chùa Cầu Hội An: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AKzMFMUcgor0W9v_PF2CDCS"}}
-2026-10-18 Hồ Tây: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"A6MkVtAgT6AKTNvHIE7AOU0"}}
-2026-10-19 Rừng tràm Trà Sư: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AN46nVf9ElQDjGvgXEXMYKs"}}
-2026-10-20 Chợ hoa Hồ Thị Kỷ: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AQsacbd8-NAW_ReunCnP2cw"}}
-2026-10-21 Cầu Trường Tiền: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AjNcd01Of4YY_VnDSnQmQWW"}}
-2026-10-22 Tà Xùa: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AwFCWMSmHuzbqo6D2_dklsE"}}
-2026-10-23 Phố đi bộ Nguyễn Huệ: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AcKQ-E1zxuxdfLSXRhnw-IF"}}
-2026-10-24 Tràng An: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AT5_l-tMI-3jMrdhRwaRiGv"}}
-2026-10-25 Cầu Long Biên: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AKUE-KzhA_skmP_-hDse-Ao"}}
+token me: 200 {"id":"28527762750220471","username":"sau21h"}
+token debug: 200 {"data":{"is_valid":true,"scopes":["threads_basic","threads_content_publish","threads_manage_replies","threads_manage_insights","threads_read_replies"],"type":"USER","application":"sau21h poster","data_access_expires_at":1799942094,"expires_at":1797349613,"issued_at":1792165613,"user_id":"28527762750220471"}}
+2026-10-17 Chùa Cầu Hội An: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AechyGmMiMpjL61y8ZW4dP5"}}
+2026-10-18 Hồ Tây: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AZl6m439iAzeWgN8ohpqain"}}
+2026-10-19 Rừng tràm Trà Sư: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AOBEZOO2nySolEnKa519HtY"}}
+2026-10-20 Chợ hoa Hồ Thị Kỷ: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"Aejo1gBVzab7qz7_rvyeygB"}}
+2026-10-21 Cầu Trường Tiền: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AcejIck_fnz6sdAWxt75XNy"}}
+2026-10-22 Tà Xùa: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"A5Il1SCv85Inm8miig354Wn"}}
+2026-10-23 Phố đi bộ Nguyễn Huệ: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"AcwXDZX1bdhJC2G5UpNJwTw"}}
+2026-10-24 Tràng An: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"ANwg203WzO_g_rS-OrpxiJz"}}
+2026-10-25 Cầu Long Biên: ERROR 403 {"error":{"message":"Application does not have permission for this action","code":10,"type":"THApiException","fbtrace_id":"ArOhh0AikGa-p2TlmY3d9X9"}}
