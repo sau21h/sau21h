@@ -21,7 +21,9 @@
     ],
     "caption": "thứ 6, Nguyễn Huệ nhẹ tênh 🌕",
     "share": "cuối tuần này đã hẹn ai lên 42 Nguyễn Huệ ngồi chưa?",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "place": "Phố đi bộ Nguyễn Huệ",
+    "topic": "Sài Gòn"
   },
   {
     "date": "2026-10-24",
@@ -45,7 +47,9 @@
     ],
     "caption": "Tràng An, sương còn chưa tan 🌿",
     "share": "lưu lại cho chuyến Ninh Bình cuối tuần nào đó.",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "place": "Tràng An",
+    "topic": "Ninh Bình"
   },
   {
     "date": "2026-10-25",
@@ -69,6 +73,8 @@
     ],
     "caption": "cỏ lau Bãi Giữa, chiều chủ nhật 🌾",
     "share": "ảnh 2 mà làm hình nền thì chill hết nấc, thử xem.",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "place": "Cầu Long Biên",
+    "topic": "Hà Nội"
   }
 ]

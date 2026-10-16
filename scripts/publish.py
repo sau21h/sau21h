@@ -26,11 +26,24 @@ TOKEN = os.environ["IG_ACCESS_TOKEN"]
 RAW = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/main"
 
 
-def call(method, path, **params):
+def call(method, path, fatal=True, **params):
     r = requests.request(method, f"{API}/{path}", params={**params, "access_token": TOKEN}, timeout=60)
     if not r.ok:
+        if not fatal:
+            print(f"{path}: {r.status_code} {r.text}")
+            return None
         sys.exit(f"{path}: {r.status_code} {r.text}")
     return r.json()
+
+
+def call_with_location(path, location_id, **params):
+    """Create a container tagged with the post's location; if Instagram rejects it, retry without."""
+    if location_id:
+        result = call("POST", path, fatal=False, location_id=location_id, **params)
+        if result:
+            return result
+        print("instagram location rejected, posting without location")
+    return call("POST", path, **params)
 
 
 def wait_ready(container_id):
@@ -48,12 +61,13 @@ def publish(post):
     # short line, optional share prompt, then #sau21h
     caption = "\n".join(filter(None, [post["caption"], post.get("share"), post["hashtags"]]))
     folder = f"{RAW}/posts/{post['date']}"
+    loc = post.get("ig_location_id") or post.get("location_id")
     # Until video generation is set up, a reel slot without reel.mp4 goes out as its keyframe image.
     if post["format"] == "reel" and (ROOT / "posts" / post["date"] / "reel.mp4").exists():
-        cid = call("POST", f"{IG_USER}/media", media_type="REELS",
-                   video_url=f"{folder}/reel.mp4", caption=caption)["id"]
+        cid = call_with_location(f"{IG_USER}/media", loc, media_type="REELS",
+                                 video_url=f"{folder}/reel.mp4", caption=caption)["id"]
     elif len(post["slides"]) == 1:
-        cid = call("POST", f"{IG_USER}/media", image_url=f"{folder}/1.jpg", caption=caption)["id"]
+        cid = call_with_location(f"{IG_USER}/media", loc, image_url=f"{folder}/1.jpg", caption=caption)["id"]
     else:
         children = [
             call("POST", f"{IG_USER}/media", image_url=f"{folder}/{n}.jpg", is_carousel_item="true")["id"]
@@ -61,8 +75,8 @@ def publish(post):
         ]
         for c in children:
             wait_ready(c)
-        cid = call("POST", f"{IG_USER}/media", media_type="CAROUSEL",
-                   children=",".join(children), caption=caption)["id"]
+        cid = call_with_location(f"{IG_USER}/media", loc, media_type="CAROUSEL",
+                                 children=",".join(children), caption=caption)["id"]
     wait_ready(cid)
     return call("POST", f"{IG_USER}/media_publish", creation_id=cid)["id"]
 
@@ -100,16 +114,28 @@ def publish_threads(post):
         name = f"{n}_916.jpg" if (folder / f"{n}_916.jpg").exists() else f"{n}.jpg"
         return f"{RAW}/posts/{post['date']}/{name}"
 
+    # Topic (the post's city or region, e.g. "Đà Lạt") and location tag; dropped if Threads rejects them.
+    extra = {k: v for k, v in (("topic_tag", (post.get("topic") or "").replace(".", "").replace("&", "")),
+                               ("location_id", post.get("location_id"))) if v}
+
+    def container(**params):
+        try:
+            return threads_call("POST", f"{user}/threads", **params, **extra)["id"]
+        except RuntimeError as e:
+            if not extra:
+                raise
+            print(f"threads topic/location rejected ({e}), posting without them")
+            return threads_call("POST", f"{user}/threads", **params)["id"]
+
     count = len(post["slides"])
     if count == 1:
-        cid = threads_call("POST", f"{user}/threads", media_type="IMAGE", image_url=url(1), text=caption)["id"]
+        cid = container(media_type="IMAGE", image_url=url(1), text=caption)
     else:
         children = [threads_call("POST", f"{user}/threads", media_type="IMAGE", image_url=url(n),
                                  is_carousel_item="true")["id"] for n in range(1, count + 1)]
         for c in children:
             threads_wait(c)
-        cid = threads_call("POST", f"{user}/threads", media_type="CAROUSEL",
-                           children=",".join(children), text=caption)["id"]
+        cid = container(media_type="CAROUSEL", children=",".join(children), text=caption)
     threads_wait(cid)
     return threads_call("POST", f"{user}/threads_publish", creation_id=cid)["id"]
 
