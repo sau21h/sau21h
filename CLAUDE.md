@@ -61,6 +61,9 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 4. After every render, report to Trung: spent this run, total spent, estimated balance (`logs/spend_summary.txt`).
 5. Later: wallpaper packs; comment-to-DM only once there is something to deliver.
 
-## Weekly review page (since 15/10/2026)
+## Content Hub (since 16/10/2026, replaces the weekly review page for approval)
+- Trung approves sau21h in the shared Content Hub (https://claude.ai/artifact/XHT1REZpF9bzpWuaiTqHEw, source `1. Business/0. Content Hub`). `scripts/week-preview/hub.js` exports the queue into the Hub format; see the header of that file and the Hub memory for the sync rules. Decisions made in the Hub must be written to the queue and pushed, or publish.py will not see them.
+
+## Weekly review page (15/10/2026, superseded by the Content Hub)
 - Each week Trung reviews the next 7 days (Mon to Sun) on a Threads-style preview artifact: https://claude.ai/artifact/PKhHmHpU36cxiBdeBtwMgC (republish to the same URL every week). Approvals and edits come in chat, then Claude sets statuses in the queue.
 - Build: `powershell -File scripts/week-preview/thumbs.ps1 -Start <monday>` then `node scripts/week-preview/build.js <monday>`; publish `scripts/week-preview/sau21h-week-preview.html`. Flag known issues per date in `scripts/week-preview/notes.json`. Thumbs and the HTML are gitignored.

@@ -5,3 +5,5 @@
 .env*
 scripts/week-preview/thumbs/
 scripts/week-preview/sau21h-week-preview.html
+scripts/week-preview/week.json
+scripts/week-preview/avatar.jpg
