@@ -62,7 +62,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 5. Later: wallpaper packs; comment-to-DM only once there is something to deliver.
 
 ## Content Hub (since 16/10/2026, replaces the weekly review page for approval)
-- Trung approves sau21h in the shared Content Hub (https://claude.ai/artifact/XHT1REZpF9bzpWuaiTqHEw, source `1. Business/0. Content Hub`). `scripts/week-preview/hub.js` exports the queue into the Hub format; see the header of that file and the Hub memory for the sync rules. Decisions made in the Hub must be written to the queue and pushed, or publish.py will not see them.
+- Trung approves sau21h in the shared Content Hub (https://claude.ai/artifact/XHT1REZpF9bzpWuaiTqHEw, source `1. Business/0. Content Hub`). The Hub build (`0. Content Hub/build.js`) reads `queue/*.json` and `posts/<date>/` directly (post id S21-YYYYMMDD; review = Chờ duyệt, draft without images = Chưa có ảnh); see the Hub memory for the sync rules. Decisions made in the Hub must be written to the queue and pushed, or publish.py will not see them.
 
 ## Weekly review page (15/10/2026, superseded by the Content Hub)
 - Each week Trung reviews the next 7 days (Mon to Sun) on a Threads-style preview artifact: https://claude.ai/artifact/PKhHmHpU36cxiBdeBtwMgC (republish to the same URL every week). Approvals and edits come in chat, then Claude sets statuses in the queue.
