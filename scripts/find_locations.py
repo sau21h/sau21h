@@ -29,7 +29,7 @@ for qfile in sorted((ROOT / "queue").glob("*.json")):
     for post in posts:
         if not post.get("place") or post.get("location_id") or post.get("status") in ("posted", "retired"):
             continue
-        r = requests.get(API, params={"query": post["place"], "fields": "id,name,city,country",
+        r = requests.get(API, params={"q": post["place"], "fields": "id,name,city,country",
                                       "access_token": TOKEN}, timeout=60)
         if not r.ok:
             log.append(f"{post['date']} {post['place']}: ERROR {r.status_code} {r.text[:300]}")
@@ -47,4 +47,3 @@ for qfile in sorted((ROOT / "queue").glob("*.json")):
 (ROOT / "logs").mkdir(exist_ok=True)
 (ROOT / "logs" / "locations.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
 print("\n".join(log))
-# rerun 2026-10-17T02:41:45
