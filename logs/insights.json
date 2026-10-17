@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17 19:38",
+ "updated": "2026-10-17 22:32",
  "posts": {
   "2026-10-12": {
    "ig": null,
@@ -19,7 +19,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 431,
+    "views": 434,
     "likes": 15,
     "replies": 2,
     "reposts": 0,
@@ -37,7 +37,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 1682,
+    "views": 1684,
     "likes": 52,
     "replies": 0,
     "reposts": 0,
@@ -55,7 +55,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 192,
+    "views": 195,
     "likes": 5,
     "replies": 0,
     "reposts": 0,
@@ -73,12 +73,12 @@
     "saved": 0
    },
    "threads": {
-    "views": 20059,
-    "likes": 614,
-    "replies": 42,
-    "reposts": 26,
+    "views": 21745,
+    "likes": 652,
+    "replies": 47,
+    "reposts": 28,
     "quotes": 0,
-    "shares": 131
+    "shares": 135
    }
   },
   "2026-10-17-1130": {
@@ -91,12 +91,30 @@
     "saved": 0
    },
    "threads": {
-    "views": 3678,
-    "likes": 99,
+    "views": 4108,
+    "likes": 109,
     "replies": 9,
-    "reposts": 6,
+    "reposts": 7,
     "quotes": 0,
-    "shares": 15
+    "shares": 18
+   }
+  },
+  "2026-10-17": {
+   "ig": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   },
+   "threads": {
+    "views": 199,
+    "likes": 2,
+    "replies": 0,
+    "reposts": 0,
+    "quotes": 0,
+    "shares": 0
    }
   }
  },
