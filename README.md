@@ -33,7 +33,7 @@ Weekend session with Claude
   1. research trends and date hooks, write a CONCEPT table (scene, landmark, day/night, subtitle, caption)
   2. Trung approves concepts in text (free)
   3. push queue/<date>_batchN.json  ->  "Generate images" Action renders 9:16 + feed images  (status: review)
-  4. Trung reviews review.html, Claude re-rolls rejects  ->  status: approved
+  4. Trung reviews in the Content Hub, Claude re-rolls rejects  ->  status: approved
   5. "Publish daily post" Action at 21:00: Instagram, then Threads  (status: posted)
 ```
 Nothing is published unless it is `approved`. To publish a post immediately, commit `publish-now.txt` containing its date.

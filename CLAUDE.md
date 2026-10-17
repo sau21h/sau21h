@@ -14,7 +14,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 - `scripts/publish.py`: publishes today's `approved` post to Instagram (graph.instagram.com), then Threads (graph.threads.net, full 9:16 images, best-effort), using the public raw GitHub URLs. Records `media_id` and `threads_id`.
 - `.github/workflows/`: `generate.yml` (Generate images), `publish.yml` (cron 20:30 VN, job waits until 21:00; backup run 21:30; can also publish immediately by committing `publish-now.txt` containing the post date), `ig-check.yml` (connection and quota check, writes `logs/ig_check.txt`).
 - `logs/`: `publish_log.txt`, `spend.csv` and `spend_summary.txt` (Gemini cost tracking), `credit.json` (prepay top-ups; add a line on each top-up).
-- `review.html`: contact sheet for reviewing generated images.
+- Review happens in the Content Hub (see below); the old `review.html` contact sheet was removed 17/10/2026.
 - `posts/profile/`: avatar candidates (not for posting).
 
 ## Status flow
@@ -22,7 +22,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 
 ## Secrets (never print, never commit)
 - GitHub Actions secrets: `GEMINI_API_KEY`, `IG_USER_ID`, `IG_ACCESS_TOKEN`, and `THREADS_ACCESS_TOKEN` (optional `THREADS_USER_ID`; publish.py posts to Threads after Instagram, best-effort).
-- `API Key.txt` in this folder is local only and covered by `.gitignore` (`*key*.txt`, `*.env`). Keep it that way.
+- No API key files in this folder (the old `API Key.txt` was deleted 17/10/2026; Actions use GitHub secrets). `.gitignore` still blocks `*key*.txt` and `*.env`.
 - The Instagram token lasts 60 days: remind Trung to renew it in the Meta app and update the secret.
 
 ## Git
@@ -31,12 +31,12 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 
 ## Status as of 13/10/2026
 - Style switch: the page moves completely to soft painterly realism (learned from Threads @odwyer_sio9); style key `painterly` in `style/styles.json`. Moon and people only sometimes; mix day/night, indoor/outdoor; rotate palettes; no clear faces.
-- All batch 1 `approved` posts set to `retired` (publish.py skips them), so nothing posts until the new batch is approved. Tests: `posts/tests/` (Hà Giang, Sài Gòn, Hà Nội, 1K, rendered locally).
+- All batch 1 `approved` posts set to `retired` (publish.py skips them), so nothing posts until the new batch is approved.
 - Generate 3 posts per round, concept table first.
 - Round 1 (`queue/2026-10-14_batch2.json`) approved: 13/10 Hà Nội thu, 14/10 Sài Gòn mưa, 15/10 Hà Giang tam giác mạch. Retired batch 1 posts were renamed `retired-<date>` (queue and posts folders) so their dates are free. Next round needed for 16/10 onwards.
 - Approved plan 16-25/10 (render 3 per round): 16 Tuyền Lâm dã quỳ, 17 sông Hoài Hội An night, 18 Hồ Tây café (indoor), 19 Trà Sư mùa nước nổi, 20 chợ hoa Hồ Thị Kỷ (20/10), 21 hoa đăng cầu Trường Tiền night, 22 Tà Xùa săn mây (sống lưng khủng long, cây cô đơn, trà Shan tuyết bên cửa sổ = indoor; replaced Tả Van; `queue/2026-10-22_taxua.json`), 23 Nguyễn Huệ balcony + moon, 24 Tràng An morning, 25 cỏ lau bãi giữa Long Biên sunset. Round 1 of it = `queue/2026-10-16_batch3.json`.
 - 13/10 Hà Nội was reposted with new slides 1 and 3 (old post ids kept as `old_media_id`/`old_threads_id`; Trung deletes the old one in the app). 14-18/10 approved. Next round to render: 19-21/10 (Trà Sư, Hồ Thị Kỷ 20/10, hoa đăng Trường Tiền).
-- Image edits: `posts/tests/` holds local renders/edits (Gemini image-edit with the existing image as input); feed 4:5 images can be rebuilt locally with PowerShell System.Drawing (no local Python).
+- Image edits: local renders/edits go in a temporary `posts/tests/` (delete after use; folders of posted dates are removed during cleanups) (Gemini image-edit with the existing image as input); feed 4:5 images can be rebuilt locally with PowerShell System.Drawing (no local Python).
 - Mix rules: day/night ~50/50, indoor ~20%, neighbourhood-level locations, all people Vietnamese, captions lowercase but proper place names capitalised.
 - Trung topped up again on 13/10 (amount not yet logged in `logs/credit.json`).
 
@@ -65,5 +65,5 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 - Trung approves sau21h in the shared Content Hub (https://claude.ai/artifact/XHT1REZpF9bzpWuaiTqHEw, source `1. Business/0. Content Hub`). The Hub build (`0. Content Hub/build.js`) reads `queue/*.json` and `posts/<date>/` directly (post id S21-YYYYMMDD; review = Chờ duyệt, draft without images = Chưa có ảnh); see the Hub memory for the sync rules. Decisions made in the Hub must be written to the queue and pushed, or publish.py will not see them.
 
 ## Weekly review page (15/10/2026, superseded by the Content Hub)
-- Each week Trung reviews the next 7 days (Mon to Sun) on a Threads-style preview artifact: https://claude.ai/artifact/PKhHmHpU36cxiBdeBtwMgC (republish to the same URL every week). Approvals and edits come in chat, then Claude sets statuses in the queue.
-- Build: `powershell -File scripts/week-preview/thumbs.ps1 -Start <monday>` then `node scripts/week-preview/build.js <monday>`; publish `scripts/week-preview/sau21h-week-preview.html`. Flag known issues per date in `scripts/week-preview/notes.json`. Thumbs and the HTML are gitignored.
+- Weekly review happens only in the Content Hub (the separate sau21h preview artifact was deleted 17/10/2026).
+- `scripts/week-preview/notes.json` (known issues per date) is read by the Hub build; nothing else in that folder is used.
