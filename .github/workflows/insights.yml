@@ -1,0 +1,35 @@
+name: Collect stats
+# Read-only: saves Instagram + Threads stats of posted posts and follower counts to logs/insights.json
+# for the Content Hub dashboard. Never publishes.
+on:
+  schedule:
+    - cron: "15 */3 * * *"   # every 3 hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/insights.yml", "scripts/insights.py"]
+permissions:
+  contents: write
+concurrency: repo-write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: Collect
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: python scripts/insights.py
+      - name: Save result
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add logs/insights.json
+          git diff --cached --quiet || { git commit -m "Collect stats" && git pull --rebase -q && git push; }
