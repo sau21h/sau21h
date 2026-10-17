@@ -19,8 +19,9 @@ FONT = ROOT / "style" / "fonts" / "Quicksand-wght.ttf"
 FEED_SIZE = (1080, 1350)
 SIDE = 0.045        # stamp width as a share of the image width
 DARK, BRIGHT = 0.35, 0.55            # background luminance range for the opacity ramp
-WHITE_MIN, WHITE_MAX = 0.09, 0.29    # white opacity at dark / bright backgrounds
-SHADOW_MAX = 0.08                    # dark outline opacity on bright backgrounds
+WHITE_MIN, WHITE_MAX = 0.06, 0.19    # white opacity at dark / bright backgrounds
+SHADOW_MAX = 0.05                    # dark outline opacity on bright backgrounds
+VERSION = 2                          # bump when the look changes: every image is re-stamped from its clean original
 
 
 def sha(path):
@@ -83,17 +84,21 @@ def main():
             continue
         marker = folder / "stamped.json"
         done = json.loads(marker.read_text(encoding="utf-8")) if marker.exists() else {}
+        same_look = done.get("version", 1) == VERSION
         for full in sorted(folder.glob("*_916.jpg")):
             n = full.name.split("_")[0]
-            if done.get(n) == sha(full):
-                continue  # already stamped
             clean = folder / f"{n}_clean.jpg"
-            Image.open(full).save(clean, "JPEG", quality=95)   # current file is a fresh, unstamped render
+            if done.get(n) == sha(full):
+                if same_look:
+                    continue  # already stamped with the current look
+            else:
+                Image.open(full).save(clean, "JPEG", quality=95)   # fresh, unstamped render
             stamped, lum, white = stamp(Image.open(clean))
             stamped.save(full, "JPEG", quality=92)
             feed_image(stamped, folder / f"{n}.jpg")
             done[n] = sha(full)
             log.append(f"{key} slide {n}: background {lum:.2f}, white {white / 2.55:.0f}%")
+        done["version"] = VERSION
         marker.write_text(json.dumps(done, indent=2) + "\n", encoding="utf-8")
     (ROOT / "logs").mkdir(exist_ok=True)
     (ROOT / "logs" / "stamp.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
