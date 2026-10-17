@@ -47,3 +47,4 @@ for qfile in sorted((ROOT / "queue").glob("*.json")):
 (ROOT / "logs").mkdir(exist_ok=True)
 (ROOT / "logs" / "locations.txt").write_text("\n".join(log) + "\n", encoding="utf-8")
 print("\n".join(log))
+# rerun 2026-10-17T02:29:06
