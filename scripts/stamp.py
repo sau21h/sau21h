@@ -74,7 +74,7 @@ def main():
     keys = set()
     for qfile in (ROOT / "queue").glob("*.json"):
         for p in json.loads(qfile.read_text(encoding="utf-8")):
-            if p.get("status") in ("review", "approved") and not p["date"].startswith("retired"):
+            if p.get("status") in ("review", "approved") and p["date"][:1].isdigit():
                 keys.add(p["date"])
     log = []
     for key in sorted(keys):
