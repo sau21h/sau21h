@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["queue/**", "scripts/find_locations.py", ".github/workflows/locations.yml"]
+    paths: ["scripts/find_locations.py", ".github/workflows/locations.yml"]
 permissions:
   contents: write
 concurrency: repo-write

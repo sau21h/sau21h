@@ -35,7 +35,8 @@ for qfile in sorted((ROOT / "queue").glob("*.json")):
             log.append(f"{post['date']} {post['place']}: ERROR {r.status_code} {r.text[:300]}")
             continue
         found = r.json().get("data", [])
-        vn = [x for x in found if (x.get("country") or "").lower() in ("vietnam", "viet nam", "vn")] or found
+        # Only accept a match in Vietnam; never fall back to a foreign place.
+        vn = [x for x in found if (x.get("country") or "").lower() in ("vietnam", "viet nam", "vn")]
         log.append(f"{post['date']} {post['place']}: " + "; ".join(
             f"{x.get('id')} {x.get('name')} ({x.get('city')}, {x.get('country')})" for x in found[:5]) or "no results")
         if vn:
