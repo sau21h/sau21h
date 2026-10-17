@@ -1,0 +1,54 @@
+[
+  {
+    "date": "2026-10-17-1130",
+    "slot": "11:30",
+    "pillar": "Đà Lạt",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Đồi chè Cầu Đất, Đà Lạt, trưa nắng mùa dã quỳ",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Cầu Đất tea hills near Đà Lạt, Vietnam, bright late morning: endless rolling rows of vivid green tea bushes curving over the hills, a few tall pine trees on the ridge, soft white mist still lingering in the far valley, clear soft blue sky with a few light clouds. Foreground: a cluster of bright yellow wild sunflowers (dã quỳ) at the edge of the tea field, strongly out of focus. No people. Palette: fresh tea green, bright warm yellow and clear soft blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Cầu Đất tea hills near Đà Lạt, bright late morning: a narrow red-earth path winding between curving rows of vivid green tea bushes up a gentle hill toward a lone tall pine tree, wild yellow sunflowers (dã quỳ) blooming along the path edge, soft mist far behind. No people. Foreground: tea leaves strongly out of focus. Palette: fresh green, warm yellow, soft blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of fresh young tea leaf buds with tiny dew drops on a tea bush in Cầu Đất, Đà Lạt, bright morning sunlight shining through them, behind them the rolling tea hills and a bright yellow wild sunflower dissolved into soft green and gold bokeh. Palette: fresh green and warm gold"
+      }
+    ],
+    "caption": "trưa thứ 7 ở đồi chè Cầu Đất 🍃",
+    "share": "lưu làm hình nền đi, nhìn là thấy mát cả cuối tuần.",
+    "topic": "Đà Lạt",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-18-1130",
+    "slot": "11:30",
+    "pillar": "Quy Nhơn",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Kỳ Co, Quy Nhơn, trưa chủ nhật biển xanh ngọc",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Kỳ Co beach, Quy Nhơn, Vietnam, bright midday seen from the green hillside above: a curved bay of clear turquoise and emerald water fading to deep blue, a strip of white sand at the foot of rugged green cliffs and big granite boulders, a few small boats far out. Clean bright sky with soft white clouds. No readable text. Foreground: wild grass and a few small white wildflowers on the hill, strongly out of focus. Palette: turquoise, emerald, sand white and bright soft blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Kỳ Co beach, Quy Nhơn, bright midday: a young Vietnamese woman in a simple modern linen beach shirt and shorts, wide-brim straw hat, walking barefoot along the edge of the clear turquoise water on white sand, seen from behind, small in the frame, natural candid moment; green cliffs and boulders around the bay. Foreground: sea foam and wet sand out of focus. Palette: turquoise, sand white and soft blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up at water level on Kỳ Co beach, Quy Nhơn: crystal clear turquoise water gently lapping over white sand and small smooth pebbles, bright sunlight making sparkling caustic patterns, the green cliffs and bay dissolved into soft bokeh behind. No people. Palette: turquoise, white and bright gold sparkle"
+      }
+    ],
+    "caption": "Kỳ Co trưa chủ nhật, xanh tới mức không tin nổi 🌊",
+    "share": "ảnh 1 hay ảnh 3 làm màn hình khoá? lưu cái bạn thích nhé.",
+    "topic": "Quy Nhơn",
+    "hashtags": "#sau21h"
+  }
+]
