@@ -1,0 +1,92 @@
+{
+ "updated": "2026-10-17 11:31",
+ "posts": {
+  "2026-10-12": {
+   "ig": null,
+   "threads": null
+  },
+  "2026-10-11": {
+   "ig": null,
+   "threads": null
+  },
+  "2026-10-13": {
+   "ig": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   },
+   "threads": {
+    "views": 385,
+    "likes": 15,
+    "replies": 2,
+    "reposts": 0,
+    "quotes": 0,
+    "shares": 0
+   }
+  },
+  "2026-10-14": {
+   "ig": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   },
+   "threads": {
+    "views": 1636,
+    "likes": 52,
+    "replies": 0,
+    "reposts": 0,
+    "quotes": 0,
+    "shares": 1
+   }
+  },
+  "2026-10-15": {
+   "ig": {
+    "views": 1,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   },
+   "threads": {
+    "views": 143,
+    "likes": 4,
+    "replies": 0,
+    "reposts": 0,
+    "quotes": 0,
+    "shares": 0
+   }
+  },
+  "2026-10-16": {
+   "ig": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0
+   },
+   "threads": {
+    "views": 11226,
+    "likes": 381,
+    "replies": 31,
+    "reposts": 17,
+    "quotes": 0,
+    "shares": 92
+   }
+  }
+ },
+ "followers": [
+  {
+   "date": "2026-10-17",
+   "ig": 0,
+   "threads": 10
+  }
+ ]
+}
