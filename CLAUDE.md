@@ -71,3 +71,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 ## Weekend noon posts (since 17/10/2026)
 - Saturday and Sunday have 2 posts: 11:30 and 21:00. Noon posts use the queue date key "<date>-1130" and folder posts/<date>-1130; publish.yml runs at 11:00 (waits to 11:30) with a 12:00 backup and sets POST_SLOT=1130. Content Hub id: S21-YYYYMMDD1130.
 - Every new post must be pushed to the queue and shown in the Content Hub (rebuild + republish) before asking Trung to approve.
+
+## Watermark (since 17/10/2026)
+- Every post image gets a small "21h" stamp (rounded square outline, Quicksand Bold, style/fonts/Quicksand-wght.ttf) in the exact centre, ~4.5% of the width. Opacity follows the background under it: dark ~9% white and no outline, bright ~29% white with a faint dark outline, linear in between (Trung approved).
+- `scripts/stamp.py` runs in the Generate images workflow after generate.py: keeps the unstamped original as <n>_clean.jpg (for wallpaper packs), stamps <n>_916.jpg, rebuilds the 4:5 <n>.jpg, and records hashes in posts/<key>/stamped.json so it never stamps twice. Profile images are never stamped. To re-roll a slide, delete <n>.jpg, <n>_916.jpg and <n>_clean.jpg.
