@@ -23,7 +23,9 @@
     "share": "cuối tuần này đã hẹn ai lên 42 Nguyễn Huệ ngồi chưa?",
     "hashtags": "#sau21h",
     "place": "Phố đi bộ Nguyễn Huệ",
-    "topic": "Sài Gòn"
+    "topic": "Sài Gòn",
+    "location_id": "25043073378716598",
+    "location_name": "Menlo Park Mall"
   },
   {
     "date": "2026-10-24",
@@ -49,7 +51,9 @@
     "share": "lưu lại cho chuyến Ninh Bình cuối tuần nào đó.",
     "hashtags": "#sau21h",
     "place": "Tràng An",
-    "topic": "Ninh Bình"
+    "topic": "Ninh Bình",
+    "location_id": "25043073378716598",
+    "location_name": "Menlo Park Mall"
   },
   {
     "date": "2026-10-25",
@@ -75,6 +79,8 @@
     "share": "ảnh 2 mà làm hình nền thì chill hết nấc, thử xem.",
     "hashtags": "#sau21h",
     "place": "Cầu Long Biên",
-    "topic": "Hà Nội"
+    "topic": "Hà Nội",
+    "location_id": "25043073378716598",
+    "location_name": "Menlo Park Mall"
   }
 ]
