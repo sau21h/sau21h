@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["queue/**", "style/**", "scripts/generate.py", ".github/workflows/generate.yml"]
+    paths: ["queue/**", "style/**", "scripts/generate.py", "scripts/stamp.py", ".github/workflows/generate.yml"]
 permissions:
   contents: write
 concurrency: repo-write
@@ -19,6 +19,8 @@ jobs:
       - run: python scripts/generate.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Stamp watermark
+        run: python scripts/stamp.py
       - name: Commit images
         run: |
           git config user.name "github-actions"
