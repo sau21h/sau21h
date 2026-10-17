@@ -141,8 +141,10 @@ def publish_threads(post):
 
 
 def main():
+    # Weekend noon posts are queued as "<date>-1130"; the noon run sets POST_SLOT=1130.
+    slot = os.environ.get("POST_SLOT", "")
     today = os.environ.get("POST_DATE") or datetime.datetime.now(
-        zoneinfo.ZoneInfo("Asia/Ho_Chi_Minh")).date().isoformat()
+        zoneinfo.ZoneInfo("Asia/Ho_Chi_Minh")).date().isoformat() + (f"-{slot}" if slot else "")
     for qfile in sorted((ROOT / "queue").glob("*.json")):
         posts = json.loads(qfile.read_text(encoding="utf-8"))
         for post in posts:

@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: "30 13 * * *"   # 20:30 Vietnam time; the job waits until 21:00 (GitHub cron often starts late)
     - cron: "30 14 * * *"   # 21:30 backup in case the first run is skipped; publish.py skips posts already posted
+    - cron: "0 4 * * *"     # 11:00 Vietnam time: weekend noon post ("<date>-1130" in the queue), waits until 11:30
+    - cron: "0 5 * * *"     # 12:00 backup for the noon post
   workflow_dispatch:
     inputs:
       post_date:
@@ -27,10 +29,11 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "push" ] && [ -f publish-now.txt ]; then echo "POST_DATE=$(tr -dc '0-9-' < publish-now.txt)" >> "$GITHUB_ENV"; git rm -q publish-now.txt;
           elif [ -n "${{ inputs.post_date }}" ]; then echo "POST_DATE=${{ inputs.post_date }}" >> "$GITHUB_ENV"; fi
-      - name: Wait until 21:00 Vietnam time
+          case "${{ github.event.schedule }}" in "0 4 * * *"|"0 5 * * *") echo "POST_SLOT=1130" >> "$GITHUB_ENV";; esac
+      - name: Wait until 21:00 (or 11:30 for the noon slot) Vietnam time
         if: github.event_name == 'schedule'
         run: |
-          now=$(date -u +%s); target=$(date -u -d "today 14:00" +%s)
+          now=$(date -u +%s); if [ "$POST_SLOT" = "1130" ]; then at="04:30"; else at="14:00"; fi; target=$(date -u -d "today $at" +%s)
           if [ "$now" -lt "$target" ]; then echo "waiting $((target - now))s"; sleep $((target - now)); fi
       - name: Publish
         run: |
