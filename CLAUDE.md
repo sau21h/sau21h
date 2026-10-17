@@ -67,3 +67,7 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 ## Weekly review page (15/10/2026, superseded by the Content Hub)
 - Weekly review happens only in the Content Hub (the separate sau21h preview artifact was deleted 17/10/2026).
 - `scripts/week-preview/notes.json` (known issues per date) is read by the Hub build; nothing else in that folder is used.
+
+## Weekend noon posts (since 17/10/2026)
+- Saturday and Sunday have 2 posts: 11:30 and 21:00. Noon posts use the queue date key "<date>-1130" and folder posts/<date>-1130; publish.yml runs at 11:00 (waits to 11:30) with a 12:00 backup and sets POST_SLOT=1130. Content Hub id: S21-YYYYMMDD1130.
+- Every new post must be pushed to the queue and shown in the Content Hub (rebuild + republish) before asking Trung to approve.
