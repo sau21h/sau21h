@@ -1,4 +1,4 @@
 this run: 6 images, ~7,956 VND
-total: 174 images, ~229,398 VND
+total: 180 images, ~237,354 VND
 topped up: 150,000 VND
-estimated balance: ~-79,398 VND
+estimated balance: ~-87,354 VND
