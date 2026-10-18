@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2026-10-26",
+    "pillar": "Hội An",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Góc nắng: hoa giấy đổ qua tường vàng phố cổ Hội An lúc hoàng hôn",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Low angle looking up at the top of an old ochre-yellow wall in Hội An ancient town at golden hour, with a weathered dark yin-yang clay tile roof edge (ngói âm dương). A cascade of vivid magenta and hot pink bougainvillea (hoa giấy) spills over the roof edge and hangs down the wall, petals glowing where the low warm sun hits them. Warm golden sunlight washes across the yellow wall with soft shadows of the bougainvillea leaves and flowers printed on it. Behind, a clean deep cobalt-blue sky, empty. Small detail shot, no people, no buildings beyond the wall, no text. Rich saturated colours: magenta, ochre gold, deep blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of a branch of vivid magenta bougainvillea (hoa giấy) hanging in front of an old ochre-yellow wall in Hội An at golden hour, the paper-thin bracts glowing translucent in the low warm sun, the textured yellow wall softly out of focus behind with warm light and dappled leaf shadows. No people, no text. Palette: glowing magenta, warm ochre gold"
+      },
+      {
+        "style": "painterly",
+        "prompt": "An old faded teal wooden window shutter set in an ochre-yellow wall in Hội An at golden hour, a spray of magenta bougainvillea (hoa giấy) falling across the top of the window, warm sunlight and the soft shadow of the flowers printed across the wall and shutter. Calm, quiet, detail shot. No people, no text. Palette: teal, ochre gold, magenta"
+      }
+    ],
+    "caption": "giá mà chiều nào cũng có một góc nắng thế này 🌺",
+    "share": "save lại làm hình nền nha.",
+    "topic": "Hội An",
+    "hashtags": "#sau21h"
+  },
+  {
+    "date": "2026-10-27",
+    "pillar": "Hà Nội",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "Góc nắng: ban công phố cũ Hà Nội mùa hoa sữa",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "Late afternoon in Hanoi in autumn: the corner of an old French-era balcony with a curled black wrought-iron railing and a faded mustard-yellow wall, a branch of a milk flower tree (hoa sữa, Alstonia scholaris) with clusters of tiny creamy-white blossoms and glossy dark-green leaves reaching across the balcony. Warm low golden sunlight across the wall with soft leaf shadows. Above, a clear deep cobalt-blue sky. Small detail shot, no people, no text. Palette: creamy white, mustard gold, deep blue, dark green"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Close-up of clusters of tiny creamy-white milk flower blossoms (hoa sữa, Alstonia scholaris) and whorls of glossy dark-green leaves in warm late-afternoon autumn sunlight in Hanoi, the old yellow wall and a curl of black iron balcony railing dissolved into soft warm bokeh behind, a slice of deep blue sky at the top. No people, no text. Palette: creamy white, warm gold, deep blue"
+      },
+      {
+        "style": "painterly",
+        "prompt": "Inside an old Hanoi apartment in late autumn afternoon: tall wooden balcony doors with faded green louvered shutters half open, warm golden sunlight streaming in and casting long shadows of the iron railing and milk flower leaves (hoa sữa) across the old patterned cement tile floor, a glimpse of creamy-white milk flower blossoms and blue sky outside. Quiet, no people, no text. Palette: warm gold, faded green, creamy white"
+      }
+    ],
+    "caption": "Hà Nội vào mùa hoa sữa, nắng chiều cũng thơm 🤍",
+    "share": "nhà bạn có cây hoa sữa nào gần cửa sổ không?",
+    "topic": "Hà Nội",
+    "hashtags": "#sau21h"
+  }
+]
