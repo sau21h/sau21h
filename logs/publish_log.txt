@@ -1,1 +1,2 @@
-17841418939527655/media_publish: 400 {"error":{"message":"Media ID is not available","type":"OAuthException","code":9007,"error_subcode":2207027,"is_transient":false,"error_user_title":"Cannot Publish","error_user_msg":"The media is not ready for publishing, please wait for a moment","fbtrace_id":"AaeSkOlvSRs6tRG5eT5Glex"}}
+2026-10-18-1130: posted 18164567191495235
+2026-10-18-1130: threads 17952802017274896
