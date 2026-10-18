@@ -31,9 +31,9 @@ def film_people(img):
     img = ImageEnhance.Contrast(img).enhance(0.95)
     img = img.filter(ImageFilter.GaussianBlur(0.7))
     # coarse grain: noise made at half size and scaled up gives bigger clumps, like 400-speed film
-    noise = Image.effect_noise((w // 2, h // 2), 20).resize((w, h), Image.BILINEAR).convert("RGB")
+    noise = Image.effect_noise((w // 2, h // 2), 10).resize((w, h), Image.BILINEAR).convert("RGB")
     img = ImageChops.add(img, noise, scale=1.0, offset=-128)
-    fine = Image.effect_noise((w, h), 8).convert("RGB")
+    fine = Image.effect_noise((w, h), 6).convert("RGB")
     img = ImageChops.add(img, fine, scale=1.0, offset=-128)
     # soft vignette
     mask = Image.radial_gradient("L").resize((w, h)).point(lambda v: min(255, v * 1.1))
