@@ -25,7 +25,8 @@ DARK, BRIGHT = 0.35, 0.55            # background luminance range for the opacit
 WHITE_MIN, WHITE_MAX = 0.06, 0.19    # white opacity at dark / bright backgrounds
 SHADOW_MAX = 0.05                    # dark outline opacity on bright backgrounds
 GRAIN_PEOPLE, GRAIN_SCENE = 11, 5    # grain strength (gaussian sigma, 0-255 scale)
-PEOPLE = re.compile(r"(woman|women|man|men|girl|boy|couple|person|people|rider|vendor|visitors?|tourists?|shoppers?|crowd|mother|daughter|florist|rower)", re.I)
+PEOPLE = re.compile(r"\b(woman|women|man|men|girl|boy|couple|person|people|rider|vendor|visitors?|tourists?|shoppers?|crowd|mother|daughter|florist|rower)\b", re.I)
+NO_PEOPLE = re.compile(r"\bno (people|person|one)( visible)?\b", re.I)
 VERSION = 3                          # bump when the look changes: every image is re-stamped from its clean original
 
 
