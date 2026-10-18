@@ -20,7 +20,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Stamp watermark
-        run: python scripts/stamp.py
+        run: mkdir -p logs; python scripts/stamp.py > logs/stamp_run.txt 2>&1 || echo FAILED >> logs/stamp_run.txt; cat logs/stamp_run.txt
       - name: Commit images
         run: |
           git config user.name "github-actions"
