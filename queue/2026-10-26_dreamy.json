@@ -3,20 +3,20 @@
     "date": "2026-10-26",
     "pillar": "Hội An",
     "format": "carousel",
-    "status": "review",
+    "status": "draft",
     "hook": "Góc nắng: hoa giấy đổ qua tường vàng phố cổ Hội An lúc hoàng hôn",
     "slides": [
       {
         "style": "painterly",
-        "prompt": "Low angle looking up at the top of an old ochre-yellow wall in Hội An ancient town at golden hour, with a weathered dark yin-yang clay tile roof edge (ngói âm dương). A cascade of vivid magenta and hot pink bougainvillea (hoa giấy) spills over the roof edge and hangs down the wall, petals glowing where the low warm sun hits them. Warm golden sunlight washes across the yellow wall with soft shadows of the bougainvillea leaves and flowers printed on it. Behind, a clean deep cobalt-blue sky, empty. Small detail shot, no people, no buildings beyond the wall, no text. Rich saturated colours: magenta, ochre gold, deep blue High contrast lighting: strong low directional sun, crisp hard-edged shadows, deep shadow areas right next to glowing sunlit areas, rich saturated colours, the sunlight is the star of the image."
+        "prompt": "Low angle looking up at the top of an old ochre-yellow wall in Hội An ancient town at golden hour, with a weathered dark yin-yang clay tile roof edge (ngói âm dương). A cascade of vivid magenta and hot pink bougainvillea (hoa giấy) spills over the roof edge and hangs down the wall, petals glowing where the low warm sun hits them. Warm golden sunlight washes across the yellow wall with soft shadows of the bougainvillea leaves and flowers printed on it. Behind, a clean deep cobalt-blue sky, empty. Small detail shot, no people, no buildings beyond the wall, no text. Rich saturated colours: magenta, ochre gold, deep blue VERY HIGH CONTRAST, chiaroscuro light: a single hard beam of low late-afternoon sun, razor-sharp shadow edges, everything outside the sunlit patches falls into deep, almost black shadow, the lit areas glow bright gold, strong saturated colours, dramatic and moody like a high-contrast film photograph, not flat, not evenly lit."
       },
       {
         "style": "painterly",
-        "prompt": "Close-up of a branch of vivid magenta bougainvillea (hoa giấy) hanging in front of an old ochre-yellow wall in Hội An at golden hour, the paper-thin bracts glowing translucent in the low warm sun, the textured yellow wall softly out of focus behind with warm light and dappled leaf shadows. No people, no text. Palette: glowing magenta, warm ochre gold High contrast lighting: strong low directional sun, crisp hard-edged shadows, deep shadow areas right next to glowing sunlit areas, rich saturated colours, the sunlight is the star of the image."
+        "prompt": "Close-up of a branch of vivid magenta bougainvillea (hoa giấy) hanging in front of an old ochre-yellow wall in Hội An at golden hour, the paper-thin bracts glowing translucent in the low warm sun, the textured yellow wall softly out of focus behind with warm light and dappled leaf shadows. No people, no text. Palette: glowing magenta, warm ochre gold VERY HIGH CONTRAST, chiaroscuro light: a single hard beam of low late-afternoon sun, razor-sharp shadow edges, everything outside the sunlit patches falls into deep, almost black shadow, the lit areas glow bright gold, strong saturated colours, dramatic and moody like a high-contrast film photograph, not flat, not evenly lit."
       },
       {
         "style": "painterly",
-        "prompt": "An old faded teal wooden window shutter set in an ochre-yellow wall in Hội An at golden hour, a spray of magenta bougainvillea (hoa giấy) falling across the top of the window, warm sunlight and the soft shadow of the flowers printed across the wall and shutter. Calm, quiet, detail shot. No people, no text. Palette: teal, ochre gold, magenta High contrast lighting: strong low directional sun, crisp hard-edged shadows, deep shadow areas right next to glowing sunlit areas, rich saturated colours, the sunlight is the star of the image."
+        "prompt": "An old faded teal wooden window shutter set in an ochre-yellow wall in Hội An at golden hour, a spray of magenta bougainvillea (hoa giấy) falling across the top of the window, warm sunlight and the soft shadow of the flowers printed across the wall and shutter. Calm, quiet, detail shot. No people, no text. Palette: teal, ochre gold, magenta VERY HIGH CONTRAST, chiaroscuro light: a single hard beam of low late-afternoon sun, razor-sharp shadow edges, everything outside the sunlit patches falls into deep, almost black shadow, the lit areas glow bright gold, strong saturated colours, dramatic and moody like a high-contrast film photograph, not flat, not evenly lit."
       }
     ],
     "caption": "giá mà chiều nào cũng có một góc nắng thế này 🌺",
@@ -28,20 +28,20 @@
     "date": "2026-10-27",
     "pillar": "Sài Gòn",
     "format": "carousel",
-    "status": "review",
+    "status": "draft",
     "hook": "Góc nắng hiện đại: căn hộ Thảo Điền, mèo cam, bé gái, nắng xuyên rèm sáo",
     "slides": [
       {
         "style": "painterly",
-        "prompt": "A modern minimalist apartment in Thảo Điền, Saigon, late afternoon: a fluffy ginger cat stretched out asleep on a wide white windowsill, hard golden sunlight streaming through half-open wooden venetian blinds and painting crisp stripes of light and shadow across the cat and the white wall, a potted monstera beside the window casting a sharp leaf shadow. Clean contemporary interior, light oak and white. No text. High contrast lighting: strong low directional sun, crisp hard-edged shadows, deep shadow areas right next to glowing sunlit areas, rich saturated colours, the sunlight is the star of the image."
+        "prompt": "A modern minimalist apartment in Thảo Điền, Saigon, late afternoon: a fluffy ginger cat stretched out asleep on a wide white windowsill, hard golden sunlight streaming through half-open wooden venetian blinds and painting crisp stripes of light and shadow across the cat and the white wall, a potted monstera beside the window casting a sharp leaf shadow. Clean contemporary interior, light oak and white. No text. VERY HIGH CONTRAST, chiaroscuro light: a single hard beam of low late-afternoon sun, razor-sharp shadow edges, everything outside the sunlit patches falls into deep, almost black shadow, the lit areas glow bright gold, strong saturated colours, dramatic and moody like a high-contrast film photograph, not flat, not evenly lit."
       },
       {
         "style": "painterly",
-        "prompt": "A modern bright apartment in Thảo Điền, Saigon, late afternoon: a little Vietnamese girl about six years old in a simple cotton dress sits cross-legged on the light oak floor, seen from the side and slightly behind, reading a picture book, the same fluffy ginger cat curled up against her leg. Hard golden sunlight through venetian blinds throws crisp stripes of light across them and the floor, deep soft shadows in the rest of the room, a monstera plant nearby. Natural candid moment, not posing. No text. High contrast lighting: strong low directional sun, crisp hard-edged shadows, deep shadow areas right next to glowing sunlit areas, rich saturated colours, the sunlight is the star of the image."
+        "prompt": "A modern apartment in Thảo Điền, Saigon, late afternoon, photographed like a real candid snapshot: a little Vietnamese girl lying on her stomach on the light oak floor with her face hidden behind an open picture book, only her messy ponytail, arms and bare feet visible, a fluffy ginger cat sleeping curled up on the small of her back. Part of her body is cut off by the edge of the frame, slightly off-centre, imperfect natural moment, real child proportions, ordinary home clutter (a toy, a cushion) in the shadows. A single hard stripe of sun through venetian blinds falls across the cat and the book. VERY HIGH CONTRAST, chiaroscuro light: a single hard beam of low late-afternoon sun, razor-sharp shadow edges, everything outside the sunlit patches falls into deep, almost black shadow, the lit areas glow bright gold, strong saturated colours, dramatic and moody like a high-contrast film photograph, not flat, not evenly lit."
       },
       {
         "style": "painterly",
-        "prompt": "Close-up on a light oak floor in a modern apartment in late afternoon: a ginger cat paw resting next to a small child hand, both inside one sharp-edged patch of golden sunlight shaped by venetian blinds, the shadow of a monstera leaf falling across them, everything around in deep warm shadow. No text. High contrast lighting: strong low directional sun, crisp hard-edged shadows, deep shadow areas right next to glowing sunlit areas, rich saturated colours, the sunlight is the star of the image."
+        "prompt": "Close-up on a light oak floor in a modern apartment in late afternoon: a ginger cat paw resting next to a small child hand, both inside one sharp-edged patch of golden sunlight shaped by venetian blinds, the shadow of a monstera leaf falling across them, everything around in deep warm shadow. No text. VERY HIGH CONTRAST, chiaroscuro light: a single hard beam of low late-afternoon sun, razor-sharp shadow edges, everything outside the sunlit patches falls into deep, almost black shadow, the lit areas glow bright gold, strong saturated colours, dramatic and moody like a high-contrast film photograph, not flat, not evenly lit."
       }
     ],
     "caption": "nếu chiều nay được về nhà sớm, nằm phơi nắng cùng mèo ☀️",
