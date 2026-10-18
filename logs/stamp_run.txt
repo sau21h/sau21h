@@ -1,0 +1,10 @@
+/home/runner/work/sau21h/sau21h/scripts/stamp.py:48: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  lum = sum(img.crop(box).convert("L").getdata()) / (side * side * 255)
+Traceback (most recent call last):
+  File "/home/runner/work/sau21h/sau21h/scripts/stamp.py", line 128, in <module>
+    main()
+  File "/home/runner/work/sau21h/sau21h/scripts/stamp.py", line 119, in main
+    log.append(f"{key} slide {n}: background {lum:.2f}, white {white / 2.55:.0f}%, film {people if people else scene}")
+                                                                                                               ^^^^^
+NameError: name 'scene' is not defined
+FAILED
