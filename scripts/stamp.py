@@ -116,7 +116,7 @@ def main():
             stamped.save(full, "JPEG", quality=92)
             feed_image(stamped, folder / f"{n}.jpg")
             done[n] = sha(full)
-            log.append(f"{key} slide {n}: background {lum:.2f}, white {white / 2.55:.0f}%, film {'people' if people else 'scene'}")
+            log.append(f"{key} slide {n}: background {lum:.2f}, white {white / 2.55:.0f}%")
         done["version"] = VERSION
         marker.write_text(json.dumps(done, indent=2) + "\n", encoding="utf-8")
     (ROOT / "logs").mkdir(exist_ok=True)
