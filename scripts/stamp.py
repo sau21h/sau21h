@@ -27,7 +27,7 @@ SHADOW_MAX = 0.05                    # dark outline opacity on bright background
 GRAIN_PEOPLE, GRAIN_SCENE = 11, 5    # grain strength (gaussian sigma, 0-255 scale)
 PEOPLE = re.compile(r"\b(woman|women|man|men|girl|boy|couple|person|people|rider|vendor|visitors?|tourists?|shoppers?|crowd|mother|daughter|florist|rower)\b", re.I)
 NO_PEOPLE = re.compile(r"\bno (people|person|one)( visible)?\b", re.I)
-VERSION = 3                          # bump when the look changes: every image is re-stamped from its clean original
+VERSION = 4                          # bump when the look changes: every image is re-stamped from its clean original
 
 
 def sha(path):
@@ -112,7 +112,7 @@ def main():
             slides = posts[key].get("slides", [])
             prompt = slides[int(n) - 1].get("prompt", "") if n.isdigit() and int(n) <= len(slides) else ""
             people = bool(PEOPLE.search(NO_PEOPLE.sub("", prompt)))
-            stamped, lum, white = stamp(film(Image.open(clean), people))
+            stamped, lum, white = stamp(Image.open(clean))  # no film finish (Trung 18/10: keep the original look)
             stamped.save(full, "JPEG", quality=92)
             feed_image(stamped, folder / f"{n}.jpg")
             done[n] = sha(full)
