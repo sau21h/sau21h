@@ -57,7 +57,7 @@
     "date": "2026-10-18",
     "pillar": "Hà Nội",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Cà phê sáng chủ nhật nhìn ra Hồ Tây",
     "slides": [
       {
@@ -77,6 +77,8 @@
     "hashtags": "#sau21h",
     "share": "save lại làm hình nền nha.",
     "place": "Hồ Tây",
-    "topic": "Hà Nội"
+    "topic": "Hà Nội",
+    "media_id": "18079171007402197",
+    "threads_id": "17991417021026972"
   }
 ]
