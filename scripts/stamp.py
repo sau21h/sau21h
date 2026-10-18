@@ -45,7 +45,7 @@ def stamp(img):
     side = round(w * SIDE)
     x0, y0 = (w - side) // 2, (h - side) // 2
     box = (x0, y0, x0 + side, y0 + side)
-    lum = sum(img.crop(box).convert("L").getdata()) / (side * side * 255)
+    lum = sum(img.crop(box).convert("L").histogram()[v] * v for v in range(256)) / (side * side * 255)
     white = round(255 * ramp(lum, WHITE_MIN, WHITE_MAX))
     shadow = round(255 * ramp(lum, 0.0, SHADOW_MAX)) if lum > (DARK + BRIGHT) / 2 else 0
 
@@ -116,7 +116,7 @@ def main():
             stamped.save(full, "JPEG", quality=92)
             feed_image(stamped, folder / f"{n}.jpg")
             done[n] = sha(full)
-            log.append(f"{key} slide {n}: background {lum:.2f}, white {white / 2.55:.0f}%, film {people if people else scene}")
+            log.append(f"{key} slide {n}: background {lum:.2f}, white {white / 2.55:.0f}%, film {'people' if people else 'scene'}")
         done["version"] = VERSION
         marker.write_text(json.dumps(done, indent=2) + "\n", encoding="utf-8")
     (ROOT / "logs").mkdir(exist_ok=True)
