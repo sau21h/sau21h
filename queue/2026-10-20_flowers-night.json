@@ -4,7 +4,7 @@
     "slot": "21:00",
     "pillar": "20/10",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "20/10: hoa, ánh sáng gắt, nền tối, không có người",
     "slides": [
       {
@@ -22,6 +22,8 @@
     ],
     "caption": "20/10, ai cũng xứng đáng được tặng một bó hoa thật đẹp 💐",
     "topic": "20/10",
-    "hashtags": "#sau21h"
+    "hashtags": "#sau21h",
+    "media_id": "18130616158836141",
+    "threads_id": "18118764499997924"
   }
 ]
