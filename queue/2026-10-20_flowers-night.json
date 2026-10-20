@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2026-10-20-2100",
+    "slot": "21:00",
+    "pillar": "20/10",
+    "format": "carousel",
+    "status": "draft",
+    "hook": "20/10: hoa, ánh sáng gắt, nền tối, không có người",
+    "slides": [
+      {
+        "style": "painterly",
+        "prompt": "A lavish bouquet of soft pink garden roses, peach roses and white baby's breath wrapped in kraft paper and translucent paper with a satin ribbon, lying on a dark walnut table. A single hard beam of warm late-afternoon sun cuts diagonally across the bouquet so the petals glow intensely, everything else falls into deep, almost black shadow. Razor-sharp light edges, rich saturated colour, dramatic still life like a high-contrast fine-art photograph. No people, no hands, no text."
+      },
+      {
+        "style": "painterly",
+        "prompt": "Extreme close-up of one perfect deep red rose with tiny water droplets on its velvety petals, lit by a single narrow hard beam of warm light from the side, the petal edges glowing, the background pure deep black. Razor-sharp light, strong contrast, rich crimson, dramatic and luxurious. No people, no text."
+      },
+      {
+        "style": "painterly",
+        "prompt": "A tall glass vase of pink peonies and pale pink roses on a modern white windowsill, a single hard golden sunbeam hits the flowers and throws a crisp, long shadow of the blooms across the wall, the rest of the room in deep shadow, a strip of deep blue sky through the window. Very high contrast, crisp shadow edges, glowing petals, clean contemporary interior. No people, no text."
+      }
+    ],
+    "caption": "20/10, ai cũng xứng đáng được tặng một bó hoa thật đẹp 💐",
+    "share": "save làm wallpaper nha, coi như sau21h tặng bạn một bó.",
+    "topic": "20/10",
+    "hashtags": "#sau21h"
+  }
+]
