@@ -59,7 +59,7 @@
     "date": "2026-10-21",
     "pillar": "Huế",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Hoa đăng dưới cầu Trường Tiền",
     "slides": [
       {
@@ -79,6 +79,8 @@
     "share": "bạn thích ảnh 1 hay ảnh 2?",
     "hashtags": "#sau21h",
     "place": "Cầu Trường Tiền",
-    "topic": "Huế"
+    "topic": "Huế",
+    "media_id": "18145433785570421",
+    "threads_id": "18168170053467348"
   }
 ]
