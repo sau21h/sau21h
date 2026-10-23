@@ -75,3 +75,8 @@ Read README.md first. It is the source of truth for positioning, the weekly cont
 ## Watermark (since 17/10/2026)
 - Every post image gets a small "21h" stamp (rounded square outline, Quicksand Bold, style/fonts/Quicksand-wght.ttf) in the exact centre, ~4.5% of the width. Opacity follows the background under it: dark ~6% white and no outline, bright ~19% white with a faint dark outline (lowered 17/10 evening), linear in between (Trung approved).
 - `scripts/stamp.py` runs in the Generate images workflow after generate.py: keeps the unstamped original as <n>_clean.jpg (for wallpaper packs), stamps <n>_916.jpg, rebuilds the 4:5 <n>.jpg, and records hashes in posts/<key>/stamped.json so it never stamps twice. Profile images are never stamped. To re-roll a slide, delete <n>.jpg, <n>_916.jpg and <n>_clean.jpg.
+
+## Project stopped (Trung, 23/10/2026)
+- Trung decided to stop sau21h after the last scheduled posts: 23/10, 24/10, 25/10 and 26/10 (all approved). The 27/10 cat post (never approved) was set to `retired`.
+- publish.yml stops itself for scheduled runs after 26/10 and insights.yml after 27/10 (date guard step "Project end check"); manual runs still work. No new content, no renders. To restart, remove the guard steps and plan a new batch.
+- Repo, images (incl. <n>_clean.jpg originals for possible wallpaper packs) and tokens stay as they are; the Meta tokens expire around 10/12/2026.
