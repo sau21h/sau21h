@@ -31,7 +31,7 @@
     "date": "2026-10-24",
     "pillar": "Ninh Bình",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Tràng An sáng sớm, sương còn chưa tan",
     "slides": [
       {
@@ -51,7 +51,9 @@
     "share": "lưu lại cho chuyến Ninh Bình cuối tuần nào đó.",
     "hashtags": "#sau21h",
     "place": "Tràng An",
-    "topic": "Ninh Bình"
+    "topic": "Ninh Bình",
+    "media_id": "18141349819615353",
+    "threads_id": "18127426076311591"
   },
   {
     "date": "2026-10-25",
