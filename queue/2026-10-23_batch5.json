@@ -59,7 +59,7 @@
     "date": "2026-10-25",
     "pillar": "Hà Nội",
     "format": "carousel",
-    "status": "approved",
+    "status": "posted",
     "hook": "Cỏ lau Bãi Giữa sông Hồng, chiều chủ nhật, cầu Long Biên",
     "slides": [
       {
@@ -79,6 +79,8 @@
     "share": "save ảnh 2 làm hình nền nha.",
     "hashtags": "#sau21h",
     "place": "Cầu Long Biên",
-    "topic": "Hà Nội"
+    "topic": "Hà Nội",
+    "media_id": "17918985939461975",
+    "threads_id": "18116681786324975"
   }
 ]
