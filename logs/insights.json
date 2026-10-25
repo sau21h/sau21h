@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26 01:36",
+ "updated": "2026-10-26 04:33",
  "posts": {
   "2026-10-12": {
    "ig": null,
@@ -19,7 +19,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 467,
+    "views": 470,
     "likes": 15,
     "replies": 2,
     "reposts": 0,
@@ -37,7 +37,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 1702,
+    "views": 1704,
     "likes": 52,
     "replies": 0,
     "reposts": 0,
@@ -55,7 +55,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 209,
+    "views": 211,
     "likes": 5,
     "replies": 0,
     "reposts": 0,
@@ -73,7 +73,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 22590,
+    "views": 22595,
     "likes": 661,
     "replies": 47,
     "reposts": 28,
@@ -91,7 +91,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 4951,
+    "views": 4957,
     "likes": 123,
     "replies": 9,
     "reposts": 8,
@@ -109,7 +109,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 300,
+    "views": 304,
     "likes": 7,
     "replies": 0,
     "reposts": 0,
@@ -127,7 +127,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 666,
+    "views": 669,
     "likes": 10,
     "replies": 0,
     "reposts": 0,
@@ -145,7 +145,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 1617,
+    "views": 1620,
     "likes": 47,
     "replies": 3,
     "reposts": 0,
@@ -163,7 +163,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 567,
+    "views": 570,
     "likes": 8,
     "replies": 1,
     "reposts": 0,
@@ -181,7 +181,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 764,
+    "views": 768,
     "likes": 10,
     "replies": 0,
     "reposts": 0,
@@ -199,7 +199,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 29,
+    "views": 32,
     "likes": 1,
     "replies": 0,
     "reposts": 0,
@@ -217,7 +217,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 133,
+    "views": 136,
     "likes": 1,
     "replies": 0,
     "reposts": 0,
@@ -235,7 +235,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 956,
+    "views": 960,
     "likes": 42,
     "replies": 0,
     "reposts": 2,
@@ -253,7 +253,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 34,
+    "views": 38,
     "likes": 0,
     "replies": 0,
     "reposts": 0,
@@ -271,7 +271,7 @@
     "saved": 0
    },
    "threads": {
-    "views": 1812,
+    "views": 1817,
     "likes": 75,
     "replies": 3,
     "reposts": 1,
@@ -289,12 +289,12 @@
     "saved": 0
    },
    "threads": {
-    "views": 649,
-    "likes": 37,
-    "replies": 1,
+    "views": 814,
+    "likes": 45,
+    "replies": 2,
     "reposts": 1,
     "quotes": 0,
-    "shares": 3
+    "shares": 5
    }
   }
  },
@@ -347,7 +347,7 @@
   {
    "date": "2026-10-26",
    "ig": 0,
-   "threads": 23
+   "threads": 24
   }
  ]
 }
